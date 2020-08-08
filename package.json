@@ -21,7 +21,7 @@
     "start:server": "yarn workspace @macroeconomia/server run start",
     "start:strapi": "yarn workspace @macroeconomia/strapi run start",
     "start:client": "yarn workspace @macroeconomia/client run start",
-    "postinstall": "yarn workspaces run preconstruct dev",
+    "postinstall": "preconstruct dev",
     "test": "jest",
     "test:server": "jest server",
     "test:client": "jest client",
@@ -34,7 +34,6 @@
     "@babel/core": "^7.11.0",
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
-    "@preconstruct/cli": "^1.1.19",
     "@testing-library/jest-dom": "^5.11.2",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^26.2.2",
@@ -52,5 +51,8 @@
     "packages": [
       "packages/*"
     ]
+  },
+  "dependencies": {
+    "@preconstruct/cli": "^1.1.20"
   }
 }
