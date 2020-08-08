@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
-      "@macroeconomia/*": ["./packages/*"]
+      "@macroeconomia/*": ["../../packages/*"]
     }
   },
-  "include": [ ".", "./packages/*" ]
+  "include": [ ".", "../../packages/*" ]
 }
