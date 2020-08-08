@@ -21,7 +21,7 @@
     "start:server": "yarn --cwd server start",
     "start:strapi": "yarn --cwd strapi start",
     "start:client": "yarn --cwd client start",
-    "postinstall": "preconstruct dev",
+    "postinstall": "yarn workspaces run preconstruct dev",
     "test": "jest",
     "test:server": "jest server",
     "test:client": "jest client",
