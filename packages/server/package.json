@@ -11,7 +11,7 @@
     "start:dev": "./node_modules/.bin/dotenv -- nodemon --exec babel-node --root-mode upward index.js",
     "start:prod": "./node_modules/.bin/dotenv -- yarn serve",
     "serve": "node ./build",
-    "build": "yarn build:server && yarn build:db",
+    "build": "yarn build:server",
     "build:server": "./node_modules/.bin/babel . -d ./build -s",
     "build:db": "yarn db:migrate",
     "db:create": "./node_modules/.bin/sequelize db:create",
