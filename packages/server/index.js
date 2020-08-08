@@ -25,7 +25,7 @@ logger(123)
 
 // db.sync().then(() => {
 
-app.use('/api', Router({ db }))
+app.use('/api', Router({}))
 
 // create a route for the app
 app.get('/api', (req, res) => {
