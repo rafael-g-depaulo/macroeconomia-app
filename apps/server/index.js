@@ -18,12 +18,12 @@ const PORT = port(NODE_ENV)
 import Router from 'Routes'
 
 // load DB connection
-import db from 'Database'
+// import db from 'Database'
 
 import logger from '@starter-project/logger'
 logger(123)
 
-db.sync().then(() => {
+// db.sync().then(() => {
   app.use('/api', Router({ db }))
 
   // create a route for the app
@@ -55,4 +55,4 @@ db.sync().then(() => {
     console.log(`Server running at: http://localhost:${PORT}/`)
   })
 
-})
+// })
