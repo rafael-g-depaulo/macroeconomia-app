@@ -1,5 +1,8 @@
 module.exports = {
-  projects: ["<rootDir>/packages/*"],
+  projects: [
+    "<rootDir>/libs/*",
+    "<rootDir>/apps/*",
+  ],
   
   testPathIgnorePatterns: [
     "<rootDir>",

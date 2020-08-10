@@ -1,26 +1,27 @@
 {
-  "name": "macroeconomia",
+  "name": "starter-project",
   "version": "1.2.0",
   "description": "Monorepo of my starter project for fullstack web projects using React.js, Express.js, Sequelize & PostgreSQL",
   "main": "index.js",
-  "repository": "git@github.com:rafael-g-depaulo/macroeconomia-express-react-sequelize-pgsql.git",
+  "repository": "git@github.com:rafael-g-depaulo/starter-project-express-react-sequelize-pgsql.git",
   "author": "Rafael G. de Paulo <rafael.g.depaulo@gmail.com>",
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "libs/*",
+    "apps/*"
   ],
   "scripts": {
-    "build": "yarn build:client && yarn build:server",
-    "build:client": "yarn workspace @macroeconomia/client run build",
-    "build:server": "yarn workspace @macroeconomia/server run build",
+    "build": "yarn && yarn build:client && yarn build:server",
+    "build:client": "yarn workspace @starter-project/client run build",
+    "build:server": "yarn workspace @starter-project/server run build",
     "clean": "yarn clean:client && yarn clean:server",
     "clean:client": "rm -rf ./client/build && mkdir ./client/build",
     "clean:server": "rm -rf ./server/build && mkdir ./server/build",
     "start": "yarn start:server",
-    "start:server": "yarn workspace @macroeconomia/server run start",
-    "start:strapi": "yarn workspace @macroeconomia/strapi run start",
-    "start:client": "yarn workspace @macroeconomia/client run start",
+    "start:server": "yarn workspace @starter-project/server run start",
+    "start:strapi": "yarn workspace @starter-project/strapi run start",
+    "start:client": "yarn workspace @starter-project/client run start",
     "postinstall": "preconstruct dev",
     "test": "jest",
     "test:server": "jest server",
@@ -36,10 +37,10 @@
     "@babel/preset-react": "^7.10.4",
     "@testing-library/jest-dom": "^5.11.2",
     "babel-core": "7.0.0-bridge.0",
-    "babel-jest": "^26.2.2",
+    "babel-jest": "^24.9.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-styled-components": "^1.11.1",
-    "jest": "^26.2.2",
+    "jest": "^24.9.0",
     "jest-fetch-mock": "^3.0.3",
     "lerna": "^3.22.1"
   },
@@ -49,7 +50,7 @@
   },
   "preconstruct": {
     "packages": [
-      "packages/*"
+      "libs/*"
     ]
   },
   "dependencies": {
