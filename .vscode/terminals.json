@@ -12,7 +12,7 @@
       "focus": true,
       "commands": [
         "cd apps/client",
-        "yarn start"
+        "BROWSER=none yarn start"
       ]
     },
     {

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import styled from 'styled-components'
-import NavItem from './NavItem'
+import NavItem from './Item'
 
 const MyNavbar = styled.nav`
   height: 48px;
