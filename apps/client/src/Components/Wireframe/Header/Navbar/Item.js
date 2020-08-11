@@ -20,6 +20,8 @@ const Item = styled(Link)`
   font-weight: 500;
   text-transform: uppercase;
 
+  cursor: pointer;
+
   &, &:hover, &:active, &:focus, &:visited {
     color: #4384D7;
   }

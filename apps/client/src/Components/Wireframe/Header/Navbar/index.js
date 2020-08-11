@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useLocation } from 'react-router-dom'
 
 import styled from 'styled-components'
 import NavItem from './Item'
-import { useLocation } from 'react-router-dom'
+import Menu from './Menu'
+
 import { boolProp } from 'Utils/boolProp'
 
 const MyNavbar = styled.nav`
@@ -25,7 +27,7 @@ export const Navbar = ({
     <MyNavbar {...props}>
       <NavItem active={boolProp(pathname === "/researchers")} to="/researchers">researchers</NavItem>
       <NavItem active={boolProp(pathname === "/about-us")} to="/about-us">about us</NavItem>
-      <NavItem active={boolProp(pathname === "/researchers4")} to="/researchers4">papers and books</NavItem>
+      <Menu active={boolProp(["/books", "/papers", "/articles"].includes(pathname))}>papers and books</Menu>
       <NavItem active={boolProp(pathname === "/events")} to="/events">events</NavItem>
     </MyNavbar>
   )
