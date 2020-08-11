@@ -1,6 +1,8 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 
+import { fontSize } from 'Themes/default'
+
 import Link from 'Components/CleanLink'
 
 const border = size => css`
@@ -14,11 +16,16 @@ const Item = styled(Link)`
   justify-content: center;
   align-items: center;
 
+  font-size: ${fontSize}px;
   text-transform: uppercase;
+
+  &, &:hover, &:active, &:focus, &:visited {
+    color: #4384D7;
+  }
 
   ${({ active }) => active && border("2px")}
 
-  &:hover {
+  &:hover, &:focus {
     ${border("3px")}
     background-color: #e3e4e8;
   }
@@ -32,10 +39,11 @@ const Item = styled(Link)`
 
 export const NavItem = ({
   children,
+  active,
   ...props
 }) => {
   return (
-    <Item {...props}>{ children }</Item>
+    <Item {...props} active={active} >{ children }</Item>
   )
 }
 

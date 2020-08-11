@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import styled from 'styled-components'
 import NavItem from './Item'
+import { useLocation } from 'react-router-dom'
+import { boolProp } from 'Utils/boolProp'
 
 const MyNavbar = styled.nav`
   height: 48px;
@@ -17,12 +19,14 @@ const MyNavbar = styled.nav`
 export const Navbar = ({
   ...props
 }) => {
+  const { pathname } = useLocation()
+
   return (
     <MyNavbar {...props}>
-      <NavItem to="/researchers">researchers</NavItem>
-      <NavItem>2</NavItem>
-      <NavItem>3</NavItem>
-      <NavItem>4</NavItem>
+      <NavItem active={boolProp(pathname === "/researchers")} to="/researchers">researchers</NavItem>
+      <NavItem active={boolProp(pathname === "/about-us")} to="/about-us">about us</NavItem>
+      <NavItem active={boolProp(pathname === "/researchers4")} to="/researchers4">papers and books</NavItem>
+      <NavItem active={boolProp(pathname === "/events")} to="/events">events</NavItem>
     </MyNavbar>
   )
 }
