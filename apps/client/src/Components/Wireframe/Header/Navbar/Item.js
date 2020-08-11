@@ -17,6 +17,7 @@ const Item = styled(Link)`
   align-items: center;
 
   font-size: ${fontSize}px;
+  font-weight: 500;
   text-transform: uppercase;
 
   &, &:hover, &:active, &:focus, &:visited {
