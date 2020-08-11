@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
-      "@starter-project/*": ["../../libs/*"]
+      "@macroeconomia/*": ["../../libs/*"]
     }
   },
   "include": [ "src", "../../libs/*" ]

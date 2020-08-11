@@ -1,5 +1,5 @@
 {
-  "name": "@starter-project/client",
+  "name": "@macroeconomia/client",
   "version": "3.0.0",
   "main": "dist/client.cjs.js",
   "license": "MIT",

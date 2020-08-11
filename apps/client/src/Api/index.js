@@ -1,5 +1,5 @@
 import axios from "axios"
-import { serverUrl } from "@starter-project/server-conn-info"
+import { serverUrl } from "@macroeconomia/server-conn-info"
 
 // development options
 const devOptions = {

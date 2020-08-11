@@ -10,7 +10,7 @@ import Middewares from "Middlewares"
 Middewares(app)
 
 // server configuration
-import { port } from "@starter-project/server-conn-info"
+import { port } from "@macroeconomia/server-conn-info"
 const { NODE_ENV = "development" } = process.env;
 const PORT = port(NODE_ENV)
 
@@ -20,7 +20,7 @@ import Router from 'Routes'
 // load DB connection
 // import db from 'Database'
 
-import logger from '@starter-project/logger'
+import logger from '@macroeconomia/logger'
 logger(123)
 
 // db.sync().then(() => {

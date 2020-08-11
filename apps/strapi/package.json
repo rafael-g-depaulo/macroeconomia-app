@@ -1,5 +1,5 @@
 {
-  "name": "@starter-project/strapi",
+  "name": "@macroeconomia/strapi",
   "private": true,
   "version": "3.0.0",
   "description": "A Strapi application",
