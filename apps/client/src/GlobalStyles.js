@@ -4,7 +4,7 @@ export const GlobalStyles = createGlobalStyle`
 
   * {
     box-sizing: border-box;
-    font-family: "Town Text";
+    font-family: "Roboto", "Town Text";
   }
 
   body {
