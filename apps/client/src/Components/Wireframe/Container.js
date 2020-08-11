@@ -9,7 +9,7 @@ export const Container = styled.div`
 
   display: grid;
   grid:
-    "navbar" auto
+    "header" auto
     "content" minmax(auto, 1fr)
     "footer" auto
   ;

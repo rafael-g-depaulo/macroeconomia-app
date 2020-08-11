@@ -1,20 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const MyNavbar = styled.nav`
-  grid-area: navbar;
+const MyHeader = styled.header`
+  grid-area: header;
   background: pink;
   height: 25px;
 `
 
-export const Navbar = ({
+export const Header = ({
   ...props
 }) => {
   return (
-    <MyNavbar>
+    <MyHeader>
       
-    </MyNavbar>
+    </MyHeader>
   )
 }
 
-export default Navbar
+export default Header

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import Container from './Container'
 import Footer from './Footer'
-import Navbar from './Navbar'
+import Header from './Header'
 
 const Content = styled.main`
   grid-area: content;
@@ -15,7 +15,7 @@ export const Wireframe = ({
 }) => {
   return (
     <Container>
-      <Navbar />
+      <Header />
       <Content>
         { children }
       </Content>
