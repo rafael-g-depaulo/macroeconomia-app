@@ -11,6 +11,7 @@ const MyNavbar = styled.nav`
   height: 48px;
   background: #EEEFF5;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24);
+  position: relative;
 
   /* flex */
   display: flex;

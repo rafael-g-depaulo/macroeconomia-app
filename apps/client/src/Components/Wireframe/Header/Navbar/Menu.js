@@ -37,7 +37,7 @@ export const Menu = ({
   const anchorRef = useRef(null)
 
   const toggleMenu = useCallback(overrride => {
-    setOpen(open => overrride || !open)
+    setOpen(open => overrride ?? !open)
   }, [])
 
 
