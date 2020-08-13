@@ -4,7 +4,7 @@ export const Container = styled.div`
   width: 100%;
   background: #F2F5F8;
 
-  padding: 50px 30px 0 30px;
+  padding: 50px 30px 50px 30px;
 `
 
 export default Container
