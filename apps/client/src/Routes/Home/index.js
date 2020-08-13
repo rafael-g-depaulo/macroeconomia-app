@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom'
 
 import BaseRoute from 'Components/BaseRoute'
 import Wireframe from 'Components/Wireframe'
+import Container from 'Components/ContentContainer'
 
 export const Home = ({
   ...props
@@ -12,12 +13,14 @@ export const Home = ({
       {/* base route */}
       <Route>
         <Wireframe>
-          <p>asdasd</p>
-          <p>11111</p>
-          <p>oiii</p>
-          <p>oiii</p>
-          <p>oiii</p>
-          <p>oiii</p>
+          <Container>
+            <p>asdasd</p>
+            <p>11111</p>
+            <p>oiii</p>
+            <p>oiii</p>
+            <p>oiii</p>
+            <p>oiii</p>
+          </Container>
         </Wireframe>
       </Route>
     </BaseRoute>
