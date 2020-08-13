@@ -1,4 +1,4 @@
-import { strapiUrl } from "@starter-project/server-conn-info"
+import { strapiUrl } from "@macroeconomia/server-conn-info"
 
 export const redirectToStrapi = (pathTransform = a => a) => (req, res, next) => {
 

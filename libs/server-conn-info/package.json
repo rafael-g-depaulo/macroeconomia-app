@@ -1,24 +1,24 @@
 {
-  "name": "@starter-project/server-conn-info",
+  "name": "@macroeconomia/server-conn-info",
   "version": "3.0.0",
   "description": "logging library",
   "keywords": [
     "log"
   ],
   "author": "Rafael G. de Paulo <rafael.g.depaulo@gmail.com>",
-  "homepage": "https://github.com/rafael-g-depaulo/starter-project-express-react-sequelize-pgsql#readme",
+  "homepage": "https://github.com/rafael-g-depaulo/macroeconomia-express-react-sequelize-pgsql#readme",
   "license": "ISC",
   "main": "dist/server-conn-info.cjs.js",
   "module": "dist/server-conn-info.esm.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafael-g-depaulo/starter-project-express-react-sequelize-pgsql.git"
+    "url": "git+https://github.com/rafael-g-depaulo/macroeconomia-express-react-sequelize-pgsql.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
-    "url": "https://github.com/rafael-g-depaulo/starter-project-express-react-sequelize-pgsql/issues"
+    "url": "https://github.com/rafael-g-depaulo/macroeconomia-express-react-sequelize-pgsql/issues"
   },
   "preconstruct": {
     "source": "index"

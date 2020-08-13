@@ -1,0 +1,49 @@
+{
+  "autokill": true,
+  
+  "env": {
+  },
+  "terminals": [
+    {
+      "name": "Client",
+      "icon": "globe",
+      "description": "Run React.js client",
+      "persistent": "persistent_client",
+      "focus": true,
+      "commands": [
+        "cd apps/client",
+        "BROWSER=none yarn start"
+      ]
+    },
+    {
+      "name": "Server",
+      "icon": "server",
+      "description": "Run Express.js server",
+      "persistent": "persistent_server",
+      "commands": [
+        "cd apps/server",
+        "yarn start"
+      ]
+    },
+    {
+      "name": "Strapi",
+      "icon": "server",
+      "description": "Run Strapi server",
+      "persistent": "persistent_strapi",
+      "commands": [
+        "cd apps/strapi",
+        "yarn develop"
+      ]
+    },
+    {
+      "name": "Preconstruct",
+      "icon": "gear",
+      "description": "Run preconstruct on packages to dinamically link them",
+      "persistent": "persistent_preconstruct",
+      "onlyMultiple": true,
+      "commands": [
+        "yarn preconstruct watch"
+      ]
+    }
+  ]
+}

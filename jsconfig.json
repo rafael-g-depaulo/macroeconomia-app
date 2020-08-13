@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@starter-project/*": [
+      "@macroeconomia/*": [
         "./libs/*",
         "./apps/*",
       ]

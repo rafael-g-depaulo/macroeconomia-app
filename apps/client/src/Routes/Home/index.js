@@ -1,24 +1,24 @@
 import React from 'react'
-import { Route } from "react-router-dom"
+import { Route } from 'react-router-dom'
 
 import BaseRoute from 'Components/BaseRoute'
-
-import Show from './Show'
-import ListAll from './ListAll'
+import Wireframe from 'Components/Wireframe'
 
 export const Home = ({
   ...props
 }) => {
   return (
     <BaseRoute path="/home" aliases={["/"]}>
-      {/* sub route */}
-      <Route path="/home/:thing_id">
-        <Show />
-      </Route>
-
-      {/* base sub route */}
+      {/* base route */}
       <Route>
-        <ListAll />
+        <Wireframe>
+          <p>asdasd</p>
+          <p>11111</p>
+          <p>oiii</p>
+          <p>oiii</p>
+          <p>oiii</p>
+          <p>oiii</p>
+        </Wireframe>
       </Route>
     </BaseRoute>
   )
