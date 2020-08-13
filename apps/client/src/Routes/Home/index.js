@@ -1,8 +1,22 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
+import styled from 'styled-components'
 
 import BaseRoute from 'Components/BaseRoute'
 import Wireframe from 'Components/Wireframe'
+import Container from 'Components/ContentContainer'
+
+import AboutBox from './AboutBox'
+import ResearchersBox from './ResearchersBox'
+
+const Grid = styled.div`
+  display: grid;
+  grid: 
+    "aboutus researchers" / 2fr 3fr
+  ;
+
+  grid-gap: 30px;
+`
 
 export const Home = ({
   ...props
@@ -10,14 +24,14 @@ export const Home = ({
   return (
     <BaseRoute path="/home" aliases={["/"]}>
       {/* base route */}
-      <Route>
+      <Route exact path={["/home", "/"]}>
         <Wireframe>
-          <p>asdasd</p>
-          <p>11111</p>
-          <p>oiii</p>
-          <p>oiii</p>
-          <p>oiii</p>
-          <p>oiii</p>
+          <Container>
+            <Grid>
+              <AboutBox />
+              <ResearchersBox />
+            </Grid>
+          </Container>
         </Wireframe>
       </Route>
     </BaseRoute>

@@ -37,7 +37,7 @@ export const Menu = ({
   const anchorRef = useRef(null)
 
   const toggleMenu = useCallback(overrride => {
-    setOpen(open => overrride || !open)
+    setOpen(open => overrride ?? !open)
   }, [])
 
 
@@ -62,6 +62,7 @@ export const Menu = ({
             horizontal: 'center',
           }}
           getContentAnchorEl={null}
+          disableScrollLock={true}
           // keepMounted
           open={open}
         >

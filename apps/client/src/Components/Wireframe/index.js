@@ -7,6 +7,7 @@ import Header from './Header'
 
 const Content = styled.main`
   grid-area: content;
+  display: flex;
 `
 
 export const Wireframe = ({
