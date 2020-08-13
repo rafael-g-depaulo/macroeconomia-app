@@ -62,6 +62,7 @@ export const Menu = ({
             horizontal: 'center',
           }}
           getContentAnchorEl={null}
+          disableScrollLock={true}
           // keepMounted
           open={open}
         >

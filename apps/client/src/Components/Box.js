@@ -8,6 +8,8 @@ export const Box = styled.div`
   padding: 25px 20px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
+
+  height: fit-content;
 `
 
 export default Box
