@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "researchers",
+  "info": {
+    "name": "Researcher"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Picture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Bio": {
+      "type": "text"
+    }
+  }
+}
