@@ -8,7 +8,7 @@ export const Text = styled.p`
   font-weight: normal;
   font-size: ${fontSize};
   line-height: 28px;
-  text-align: center;
+  text-align: left;
 `
 
 export default Text
