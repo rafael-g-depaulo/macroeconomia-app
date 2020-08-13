@@ -4,9 +4,9 @@ import { fontSize } from "Themes/default"
 
 export const Text = styled.p`  
   font-family: 'Roboto';
-  font-style: normal;
-  font-weight: normal;
-  font-size: ${fontSize};
+  font-style: ${({ italic }) => italic ? "italic" : "normal"};
+  font-weight: ${({ bold }) => bold ? "bold" : "normal"};
+  font-size: ${fontSize}px;
   line-height: 28px;
   text-align: left;
 `
