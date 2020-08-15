@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 export const Box = styled.div`
   background: #FFFFFF;
@@ -10,6 +10,8 @@ export const Box = styled.div`
   border-radius: 4px;
 
   height: fit-content;
+
+  ${({ area }) => !!area && css`grid-area: ${area};`}
 `
 
 export default Box
