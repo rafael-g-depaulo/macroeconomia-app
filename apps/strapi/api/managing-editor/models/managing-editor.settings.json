@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "managing_editors",
+  "info": {
+    "name": "Managing Editor"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "string"
+    },
+    "Phone": {
+      "type": "string"
+    }
+  }
+}

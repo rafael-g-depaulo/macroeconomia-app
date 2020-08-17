@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/managing-editor",
+      "handler": "managing-editor.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/managing-editor",
+      "handler": "managing-editor.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/managing-editor",
+      "handler": "managing-editor.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
