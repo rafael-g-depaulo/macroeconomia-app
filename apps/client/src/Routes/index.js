@@ -32,7 +32,8 @@ export const Routes = ({
 
         {/* 404 */}
         <Route path="*">
-          <Redirect to="/home" />
+          <div>aa</div>
+          {/* <Redirect to="/home" /> */}
         </Route>
       </Switch>
     </Router>
