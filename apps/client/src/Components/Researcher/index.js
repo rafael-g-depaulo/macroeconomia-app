@@ -22,6 +22,10 @@ const MyTitle = styled(Title)`
   text-align: left;
   margin: 10px 0;
   font-size: 24px;
+  
+  overflow: hidden;
+  max-height: 28px;
+
 `
 
 const Content = styled.div`

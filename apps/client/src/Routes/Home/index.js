@@ -1,40 +1,24 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
-import styled from 'styled-components'
+import { Route, Switch } from 'react-router-dom'
 
-import BaseRoute from 'Components/BaseRoute'
-import Wireframe from 'Components/Wireframe'
-import Container from 'Components/ContentContainer'
-
-import AboutBox from './AboutBox'
-import ResearchersBox from './ResearchersBox'
-
-const Grid = styled.div`
-  display: grid;
-  grid: 
-    "aboutus researchers" / 2fr 3fr
-  ;
-
-  grid-gap: 30px;
-`
+import HomePage from './HomePage'
 
 export const Home = ({
+  match,
   ...props
 }) => {
+  const { path } = match
   return (
-    <BaseRoute path="/home" aliases={["/"]}>
+    <Switch>
+      
       {/* base route */}
-      <Route exact path={["/home", "/"]}>
-        <Wireframe>
-          <Container>
-            <Grid>
-              <AboutBox />
-              <ResearchersBox />
-            </Grid>
-          </Container>
-        </Wireframe>
+      <Route exact path={path}>
+        {() => (
+          <HomePage />
+        )}
       </Route>
-    </BaseRoute>
+
+    </Switch>
   )
 }
 
