@@ -7,6 +7,7 @@ import {
 } from "react-router-dom"
 
 import Home from './Home'
+import Papers from './Papers'
 import Researchers from './Researchers'
 
 export const Routes = ({
@@ -26,6 +27,8 @@ export const Routes = ({
 
         {/* home (the "casa" part is just a joke to show that multiple paths work)*/}
         <Route path={["/home", "/casa"]} component={Home} />
+
+        <Route path="/papers" component={Papers} />
 
         {/* 404 */}
         <Route path="*">
