@@ -73,7 +73,6 @@ export const Footer = ({
   ...props
 }) => {
   const { data } = useManagingEditor()
-  console.log(data)
   return (
     <MyFooter {...props}>
       <ContactArea>
