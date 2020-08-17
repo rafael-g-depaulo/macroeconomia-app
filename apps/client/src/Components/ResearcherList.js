@@ -22,7 +22,7 @@ export const ResearcherList = ({
   ...props
 }) => {
   return (
-    <List>
+    <List {...props}>
       { researchers.flatMap(x => Array.from({ length: 10 }).fill(x)).map(({ id, Name, Bio, Picture }, i) =>
         <Researcher
           key={id + i}
