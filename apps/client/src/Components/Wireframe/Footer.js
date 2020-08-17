@@ -1,6 +1,8 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 
+import { useManagingEditor } from 'Api/managingEditor'
+
 import EmailIcon from '@material-ui/icons/Email'
 import PhoneIcon from '@material-ui/icons/Phone'
 
@@ -62,19 +64,26 @@ const ContactItem = ({ icon, children }) => (
   </Centered>
 )
 
+const DevRights = styled.span`
+  font-size: 10px;
+  color: #F2F5F8;
+`
+
 export const Footer = ({
   ...props
 }) => {
+  const { data } = useManagingEditor()
+  console.log(data)
   return (
     <MyFooter {...props}>
       <ContactArea>
-        <MyText mg="5px">Managing Editor: John Doe</MyText>
+        <MyText mg="5px">Managing Editor: { data?.name ?? "admin" }</MyText>
         <ContactList>
-          <ContactItem icon={<EmailIcon />}>1</ContactItem>
-          <ContactItem icon={<PhoneIcon />}>2</ContactItem>
+          <ContactItem icon={<EmailIcon />}>{ data?.email ?? "email@gmail.com" }</ContactItem>
+          <ContactItem icon={<PhoneIcon />}>{ data?.phone ?? "(XX) XXXXX-XXXX" }</ContactItem>
         </ContactList>
       </ContactArea>
-      <MyText>Developed by rafael.g.depaulo@gmail.com &amp; designed by nayararossisilva@gmail.com</MyText>
+      <DevRights>Developed by rafael.g.depaulo@gmail.com &amp; designed by nayararossisilva@gmail.com</DevRights>
     </MyFooter>
   )
 }
