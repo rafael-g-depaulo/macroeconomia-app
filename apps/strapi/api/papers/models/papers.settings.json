@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "papers",
+  "info": {
+    "name": "Papers"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "author": {
+      "type": "string"
+    },
+    "release_date": {
+      "type": "date"
+    },
+    "link": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}
