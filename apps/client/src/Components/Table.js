@@ -74,7 +74,7 @@ export const Table = ({
   const _onChangePage = useCallback((e, newPage) => {
     setPage(newPage)
     onChangePage(rowsPerPage, newPage)
-  }, [])
+  }, [onChangePage, rowsPerPage])
 
   return (
     <MuiTableContainer>

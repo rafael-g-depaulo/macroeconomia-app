@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { tableBgGreen, tableBorderGreen } from 'Themes/default'
+import { tableBorderGreen } from 'Themes/default'
 
 import { useAllPapers } from 'Api/papers'
 
