@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import EmailIcon from '@material-ui/icons/Email'
 import PhoneIcon from '@material-ui/icons/Phone'
@@ -7,7 +7,7 @@ import PhoneIcon from '@material-ui/icons/Phone'
 const MyFooter = styled.footer`
   min-height: 30px;
   background: #31965F;
-  grid-area: "footer";
+  grid-area: footer;
 
   display: flex;
   flex-direction: row;
@@ -15,6 +15,13 @@ const MyFooter = styled.footer`
   align-items: center;
 
   padding: 10px 15px;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+     > *:first-child {
+      margin-bottom: 20px;
+    }
+  }
 `
 
 const ContactArea = styled.div`
@@ -29,7 +36,17 @@ const ContactList = styled.div`
   margin-left: 20px;
 `
 
-const ItemLabel = styled.span`
+const MyText = styled.span`
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: center;
+  color: #F2F5F8;
+
+  ${props => props.mg && css`margin-top: ${props.mg};`}
+`
+
+const ItemLabel = styled(MyText)`
   margin-left: 15px;
 `
 
@@ -51,13 +68,13 @@ export const Footer = ({
   return (
     <MyFooter {...props}>
       <ContactArea>
-        <span>Managing Editor: John Doe</span>
+        <MyText mg="5px">Managing Editor: John Doe</MyText>
         <ContactList>
           <ContactItem icon={<EmailIcon />}>1</ContactItem>
           <ContactItem icon={<PhoneIcon />}>2</ContactItem>
         </ContactList>
       </ContactArea>
-      <span>Developed by rafael.g.depaulo@gmail.com & designed by nayararossisilva@gmail.com</span>
+      <MyText>Developed by rafael.g.depaulo@gmail.com &amp; designed by nayararossisilva@gmail.com</MyText>
     </MyFooter>
   )
 }
