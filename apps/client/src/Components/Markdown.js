@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown'
 
 import Text from 'Components/Text'
 import Link from 'Components/Link'
+import Image from './Image'
 
 export const Markdown = ({
   source = "",
@@ -13,7 +14,8 @@ export const Markdown = ({
       source={source}
       renderers={{
         paragraph: Text,
-        link: Link
+        link: Link,
+        image: Image,
       }}
     />
   )

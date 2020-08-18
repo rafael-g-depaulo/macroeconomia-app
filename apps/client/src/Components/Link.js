@@ -5,6 +5,8 @@ import { textBlue, textBlue2, textBlue3 } from 'Themes/default'
 const MyLink = styled.a`
   color: ${textBlue};
   
+  text-decoration: none;
+  
   &:hover, &:focus {
     color: ${textBlue2};
   }

@@ -48,23 +48,24 @@ export const List = ({
           <Table
             columns={["Title", "Author", "Release Date"]}
             data={formattedData}
-            RowComponent={({ row }) => 
-            <MuiTableRow key={row.id}>
-              {row?.values?.map((value, i) =>
-                i === 0 ?
-                <TableCell
-                  key={i}
-                  align="inherit"
-                  children={<Link href={row.link}>{value}</Link>}
-                />
-                :
-                <TableCell
-                  key={i}
-                  align="right"
-                  children={value}
-                />
-              )}
-            </MuiTableRow>}
+            RowComponent={({ row }) => (
+              <MuiTableRow key={row.id}>
+                {row?.values?.map((value, i) =>
+                  i === 0 ?
+                  <TableCell
+                    key={i}
+                    align="inherit"
+                    children={<Link href={row.link}>{value}</Link>}
+                  />
+                  :
+                  <TableCell
+                    key={i}
+                    align="right"
+                    children={value}
+                  />
+                )}
+              </MuiTableRow>
+            )}
           />
         </Box>
       </Container>
