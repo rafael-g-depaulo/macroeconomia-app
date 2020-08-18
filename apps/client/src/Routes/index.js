@@ -6,11 +6,11 @@ import {
   Redirect,
 } from "react-router-dom"
 
-import Home from './Home'
-import Papers from './Papers'
 import Researchers from './Researchers'
 import Articles from './Articles'
+import Papers from './Papers'
 import Books from './Books'
+import Home from './Home'
 
 export const Routes = ({
   ...props
