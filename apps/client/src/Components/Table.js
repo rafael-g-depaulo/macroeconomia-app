@@ -20,12 +20,13 @@ const BorderedTableCell = styled(MuiTableCell)`
 
 // data must be an array of objects in the format:
 // { id: string , values: string[]}
-export const TableRow = ({ row }) => {
+export const TableRow = ({ row, Cell = BorderedTableCell }) => {
   return (
     <MuiTableRow key={row.id}>
     {row?.values?.map((value, i) =>
-      <BorderedTableCell
+      <Cell
         key={i}
+        index={i}
         align={ i === 0 ? "inherit" : "right"}
         children={value}
       />
