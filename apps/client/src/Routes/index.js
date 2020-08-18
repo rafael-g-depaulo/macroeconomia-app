@@ -10,6 +10,7 @@ import Home from './Home'
 import Papers from './Papers'
 import Researchers from './Researchers'
 import Articles from './Articles'
+import Books from './Books'
 
 export const Routes = ({
   ...props
@@ -32,6 +33,8 @@ export const Routes = ({
         <Route path="/papers" component={Papers} />
 
         <Route path="/articles" component={Articles} />
+
+        <Route path={["/books", "/book", "/livros"]} component={Books} />
 
         {/* 404 */}
         <Route path="*">
