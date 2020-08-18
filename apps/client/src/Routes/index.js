@@ -9,6 +9,7 @@ import {
 import Home from './Home'
 import Papers from './Papers'
 import Researchers from './Researchers'
+import Articles from './Articles'
 
 export const Routes = ({
   ...props
@@ -29,6 +30,8 @@ export const Routes = ({
         <Route path={["/home", "/casa"]} component={Home} />
 
         <Route path="/papers" component={Papers} />
+
+        <Route path="/articles" component={Articles} />
 
         {/* 404 */}
         <Route path="*">

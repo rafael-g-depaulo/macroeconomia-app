@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "name": "Articles"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Author": {
+      "type": "string"
+    },
+    "Release_Date": {
+      "type": "date"
+    },
+    "Link": {
+      "type": "string"
+    }
+  }
+}

@@ -1,17 +1,17 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
-import List from "./List"
+import List from './List'
 
-export const Papers = ({
+export const Articles = ({
   match,
   ...props
 }) => {
   const { path } = match
   return (
     <Switch>
-
-      {/* page to list all papers */}
+      
+      {/* page to list all articles */}
       <Route exact path={`${path}`}>
         {() => (
           <List />
@@ -22,4 +22,4 @@ export const Papers = ({
   )
 }
 
-export default Papers
+export default Articles
