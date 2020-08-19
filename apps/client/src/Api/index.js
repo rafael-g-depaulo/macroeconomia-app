@@ -21,6 +21,8 @@ export const api = axios.create({
   baseURL: serverUrl,
 })
 
+console.log("strapiUrl", envSpecificOptions.strapiUrl)
+
 export const strapi = axios.create({
   ...envSpecificOptions,
   baseURL: envSpecificOptions.strapiUrl,
