@@ -4,7 +4,9 @@ import Container from 'Components/ContentContainer'
 import Wireframe from 'Components/Wireframe'
 import AboutBox from 'Routes/Home/AboutBox'
 
-export const AboutUs = ({}) => {
+export const AboutUs = ({
+  ...props
+}) => {
   
   return (
     <Wireframe>
