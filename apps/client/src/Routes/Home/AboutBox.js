@@ -13,7 +13,7 @@ export const AboutBox = ({
   const { data, error } = useAboutUs()
   
   return (
-    <Box area="aboutus">
+    <Box area="aboutus" {...props}>
       <Title>About Us</Title>
       <Markdown source={ error?.toString() ?? data ?? lorem } />
     </Box>
