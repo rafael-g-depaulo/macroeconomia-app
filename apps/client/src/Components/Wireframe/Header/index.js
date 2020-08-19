@@ -6,7 +6,7 @@ import Navbar from './Navbar'
 
 const MyHeader = styled.header`
   grid-area: header;
-  background: pink;
+  /* background: pink; */
   min-height: 25px;
 
   display: flex;

@@ -12,6 +12,8 @@ export const Show = ({
 }) => {
   const { data, isLoading } = useResearcher(id)
   
+  if (isLoading) return <div>loading...</div>
+
   return (
     <Wireframe>
       <Container>
