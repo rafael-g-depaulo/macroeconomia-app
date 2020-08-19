@@ -24,14 +24,13 @@ const TableCell = styled(MuiTableCell)`
 export const List = ({
   ...props
 }) => {
-  const { data, isLoading } = useAllBooks()
+  const { data, isLoading, error } = useAllBooks()
   const baseUrl = useUrl()
 
-  if (isLoading) return <div>loading...</div>
+  if (isLoading || error) return <div>loading...</div>
 
-  console.log(data)
   const formattedData = data
-    .map(({ id, title, author, release_date }) => {
+    ?.map(({ id, title, author, release_date }) => {
       const { groups } = /(?<year>\d+)-(?<month>\d+)-(?<day>\d+)/.exec(release_date)
       const date = `${groups.day}/${groups.month}/${groups.year}`
       return ({
