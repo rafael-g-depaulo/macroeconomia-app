@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react'
+import React, { lazy } from 'react'
 import styled from 'styled-components'
 
 import MuiTableCell from '@material-ui/core/TableCell'
@@ -6,15 +6,14 @@ import MuiTableRow from '@material-ui/core/TableRow'
 
 import { useAllEvents } from 'Api/events'
 
-import Wireframe from 'Components/Wireframe'
-import Container from 'Components/ContentContainer'
 import Box from 'Components/Box'
 
 import { tableBorderGreen } from 'Themes/default'
 import Link from 'Components/Link'
+import LazyPage from 'Components/LazyPage'
+import Loading from 'Components/Loading'
 
 const Table = lazy(() => import("Components/Table"))
-
 
 const TableCell = styled(MuiTableCell)` 
   &:not(:first-child) {
@@ -27,8 +26,6 @@ export const List = ({
 }) => {
 
   const { data, isLoading } = useAllEvents()
-
-  if (isLoading) return <div>loading...</div>
 
   const formattedData = data
     ?.map(({ id, name, date, link }) => {
@@ -45,38 +42,32 @@ export const List = ({
     })
 
   return (
-    <Wireframe>
-      <Container>
-        <Suspense fallback={<div>loading...</div>}>
-          <Box>
-            <Table
-            
-              columns={["Name", "Release Date"]}
-              data={formattedData}
-              RowComponent={({ row }) => (
-                <MuiTableRow key={row.id}>
-                  {row?.values?.map((value, i) =>
-                    i === 0 ?
-                    <TableCell
-                      key={i}
-                      align="inherit"
-                      children={<Link href={`${row.link}`}>{value}</Link>}
-                    />
-                    :
-                    <TableCell
-                      key={i}
-                      align="right"
-                      children={value}
-                    />
-                  )}
-                </MuiTableRow>
+    <LazyPage isLoading={isLoading} fallback={<Box><Loading /></Box>}>
+      <Box>
+        <Table
+          columns={["Name", "Release Date"]}
+          data={formattedData}
+          RowComponent={({ row }) => (
+            <MuiTableRow key={row.id}>
+              {row?.values?.map((value, i) =>
+                i === 0 ?
+                  <TableCell
+                    key={i}
+                    align="inherit"
+                    children={<Link href={`${row.link}`}>{value}</Link>}
+                  />
+                :
+                  <TableCell
+                    key={i}
+                    align="right"
+                    children={value}
+                  />
               )}
-
-            />
-          </Box>
-        </Suspense>
-      </Container>
-    </Wireframe>
+            </MuiTableRow>
+          )}
+        />
+      </Box>
+    </LazyPage>
   )
 }
 
