@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { lazy } from 'react'
 import {
   BrowserRouter as Router,
   Switch,
@@ -6,12 +6,15 @@ import {
   Redirect,
 } from "react-router-dom"
 
-import Researchers from './Researchers'
-import Articles from './Articles'
-import Papers from './Papers'
-import Books from './Books'
-import Home from './Home'
-import AboutUs from './AboutUs'
+import LazyRoute from 'Components/LazyRoute'
+
+const Researchers = lazy(() => import('./Researchers'))
+const Articles = lazy(() => import('./Articles'))
+const AboutUs = lazy(() => import('./AboutUs'))
+const Events = lazy(() => import('./Events'))
+const Papers = lazy(() => import('./Papers'))
+const Books = lazy(() => import('./Books'))
+const Home = lazy(() => import('./Home'))
 
 export const Routes = ({
   ...props
@@ -26,18 +29,33 @@ export const Routes = ({
 
       <Switch>
         {/* researchers */}
-        <Route path="/researchers" component={Researchers} />
+        <LazyRoute path="/researchers">
+          <Researchers />
+        </LazyRoute>
 
-        {/* home (the "casa" part is just a joke to show that multiple paths work)*/}
-        <Route path={["/home", "/casa"]} component={Home} />
+        <LazyRoute path="/home">
+          <Home />
+        </LazyRoute>
 
-        <Route path="/papers" component={Papers} />
+        <LazyRoute path={["/papers", "/paper"]}>
+          <Papers />
+        </LazyRoute>
 
-        <Route path="/articles" component={Articles} />
+        <LazyRoute path={["/articles", "/article"]}>
+          <Articles />
+        </LazyRoute>
 
-        <Route path={["/books", "/book", "/livros"]} component={Books} />
+        <LazyRoute path={["/books", "/book", "/livros"]} >
+          <Books />
+        </LazyRoute>
 
-        <Route path={["/aboutus", "/about-us", "/sobre-nos"]} component={AboutUs} />
+        <LazyRoute path={["/events", "/event", "/eventos", "/evento"]} >
+          <Events />
+        </LazyRoute>
+
+        <LazyRoute path={["/aboutus", "/about-us", "/sobre-nos"]} >
+          <AboutUs />
+        </LazyRoute>
 
         {/* 404 */}
         <Route path="*">

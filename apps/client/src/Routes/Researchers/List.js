@@ -1,11 +1,10 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import { useAllResearchers } from 'Api/researcher'
 
-import Wireframe from 'Components/Wireframe'
-import Container from 'Components/ContentContainer'
 import ResearcherList from 'Components/ResearcherList'
-import styled from 'styled-components'
+import LazyPage from 'Components/LazyPage'
 
 const MyResearcherList = styled(ResearcherList)`
   overflow: visible;
@@ -15,14 +14,12 @@ const MyResearcherList = styled(ResearcherList)`
 export const List = ({
   ...props
 }) => {
-  const { data } = useAllResearchers()
-  
+  const { data, isLoading } = useAllResearchers()
+
   return (
-    <Wireframe>
-      <Container>
-        <MyResearcherList researchers={data} />
-      </Container>
-    </Wireframe>
+    <LazyPage isLoading={isLoading}>
+      <MyResearcherList researchers={data} />
+    </LazyPage>
   )
 }
 

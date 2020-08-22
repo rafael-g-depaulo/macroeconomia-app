@@ -36,6 +36,7 @@ const Content = styled.div`
 const Grid = styled.div`
   display: grid;
   height: ${height}px;
+  width: 100%;
   max-width: 600px;
   grid:
     "picture content" / 150px 1fr
