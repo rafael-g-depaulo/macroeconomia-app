@@ -8,11 +8,10 @@ import { useAllPapers } from 'Api/papers'
 import MuiTableCell from '@material-ui/core/TableCell'
 import MuiTableRow from '@material-ui/core/TableRow'
 
-import Wireframe from 'Components/Wireframe'
-import Container from 'Components/ContentContainer'
 import Box from 'Components/Box'
 import Table from 'Components/Table'
 import Link from 'Components/Link'
+import LazyPage from 'Components/LazyPage'
 import Loading from 'Components/Loading'
 
 const TableCell = styled(MuiTableCell)` 
@@ -25,8 +24,6 @@ export const List = ({
   ...props
 }) => {
   const { data, isLoading, error } = useAllPapers()
-
-  if (isLoading || error) return <Loading />
 
   const formattedData = data
     ?.map(({ id, title, author, release_date, link }) => {
@@ -44,33 +41,31 @@ export const List = ({
     })
 
   return (
-    <Wireframe>
-      <Container>
-        <Box>
-          <Table
-            columns={["Title", "Author", "Release Date"]}
-            data={formattedData}
-            RowComponent={({ row }) => 
-            <MuiTableRow key={row.id}>
-            {row?.values?.map((value, i) =>
-              i === 0 ?
-              <TableCell
-                key={i}
-                align="inherit"
-                children={<Link href={row.link}>{value}</Link>}
-              />
-              :
-              <TableCell
-                key={i}
-                align="right"
-                children={value}
-              />
-            )}
-          </MuiTableRow>}
-          />
-        </Box>
-      </Container>
-    </Wireframe>
+    <LazyPage isLoading={isLoading || error} fallback={<Box><Loading /></Box>}>
+      <Box>
+        <Table
+          columns={["Title", "Author", "Release Date"]}
+          data={formattedData}
+          RowComponent={({ row }) => 
+          <MuiTableRow key={row.id}>
+          {row?.values?.map((value, i) =>
+            i === 0 ?
+            <TableCell
+              key={i}
+              align="inherit"
+              children={<Link href={row.link}>{value}</Link>}
+            />
+            :
+            <TableCell
+              key={i}
+              align="right"
+              children={value}
+            />
+          )}
+        </MuiTableRow>}
+        />
+      </Box>
+    </LazyPage>
   )
 }
 

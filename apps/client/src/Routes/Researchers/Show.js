@@ -2,10 +2,8 @@ import React from 'react'
 
 import { useResearcher } from 'Api/researcher'
 
-import Wireframe from 'Components/Wireframe'
-import Container from 'Components/ContentContainer'
 import ResearcherCard from './ResearcherCard'
-import Loading from 'Components/Loading'
+import LazyPage from 'Components/LazyPage'
 
 export const Show = ({
   id,
@@ -13,14 +11,10 @@ export const Show = ({
 }) => {
   const { data, isLoading } = useResearcher(id)
   
-  if (isLoading) return <Loading />
-
   return (
-    <Wireframe>
-      <Container>
-        { !isLoading && <ResearcherCard data={data} /> }
-      </Container>
-    </Wireframe>
+    <LazyPage isLoading={isLoading}>
+      <ResearcherCard data={data} />
+    </LazyPage>
   )
 }
 

@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Wireframe from 'Components/Wireframe'
-import Container from 'Components/ContentContainer'
+import LazyPage from 'Components/LazyPage'
 
 import AboutBox from './AboutBox'
 import ResearchersBox from './ResearchersBox'
@@ -38,14 +37,12 @@ export const HomePage = ({
   ...props
 }) => {
   return (
-    <Wireframe>
-      <Container>
-        <Grid>
-          <AboutBox />
-          <ResearchersBox />
-        </Grid>
-      </Container>
-    </Wireframe>
+    <LazyPage>
+      <Grid>
+        <AboutBox />
+        <ResearchersBox />
+      </Grid>
+    </LazyPage>
   )
 }
 
