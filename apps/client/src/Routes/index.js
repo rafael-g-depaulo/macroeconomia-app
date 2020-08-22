@@ -12,6 +12,7 @@ import Papers from './Papers'
 import Books from './Books'
 import Home from './Home'
 import AboutUs from './AboutUs'
+import Events from './Events'
 
 export const Routes = ({
   ...props
@@ -36,6 +37,8 @@ export const Routes = ({
         <Route path="/articles" component={Articles} />
 
         <Route path={["/books", "/book", "/livros"]} component={Books} />
+
+        <Route path={["/events", "/event", "/eventos", "/evento"]} component={Events} />
 
         <Route path={["/aboutus", "/about-us", "/sobre-nos"]} component={AboutUs} />
 
