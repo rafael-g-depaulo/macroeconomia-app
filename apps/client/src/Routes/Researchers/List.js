@@ -6,6 +6,7 @@ import Wireframe from 'Components/Wireframe'
 import Container from 'Components/ContentContainer'
 import ResearcherList from 'Components/ResearcherList'
 import styled from 'styled-components'
+import Loading from 'Components/Loading'
 
 const MyResearcherList = styled(ResearcherList)`
   overflow: visible;
@@ -15,8 +16,10 @@ const MyResearcherList = styled(ResearcherList)`
 export const List = ({
   ...props
 }) => {
-  const { data } = useAllResearchers()
+  const { data, isLoading } = useAllResearchers()
   
+  if (isLoading) return <Loading />
+
   return (
     <Wireframe>
       <Container>

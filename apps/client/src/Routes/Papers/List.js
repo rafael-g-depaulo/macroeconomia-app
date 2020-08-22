@@ -13,6 +13,7 @@ import Container from 'Components/ContentContainer'
 import Box from 'Components/Box'
 import Table from 'Components/Table'
 import Link from 'Components/Link'
+import Loading from 'Components/Loading'
 
 const TableCell = styled(MuiTableCell)` 
   &:not(:first-child) {
@@ -25,7 +26,7 @@ export const List = ({
 }) => {
   const { data, isLoading, error } = useAllPapers()
 
-  if (isLoading || error) return <div>loading...</div>
+  if (isLoading || error) return <Loading />
 
   const formattedData = data
     ?.map(({ id, title, author, release_date, link }) => {

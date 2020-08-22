@@ -14,6 +14,7 @@ import Container from 'Components/ContentContainer'
 import Box from 'Components/Box'
 import Link from 'Components/CleanLink'
 import Table from 'Components/Table'
+import Loading from 'Components/Loading'
 
 
 const TableCell = styled(MuiTableCell)` 
@@ -27,7 +28,7 @@ export const List = ({
   const { data, isLoading, error } = useAllBooks()
   const baseUrl = useUrl()
 
-  if (isLoading || error) return <div>loading...</div>
+  if (isLoading || error) return <Loading />
 
   const formattedData = data
     ?.map(({ id, title, author, release_date }) => {

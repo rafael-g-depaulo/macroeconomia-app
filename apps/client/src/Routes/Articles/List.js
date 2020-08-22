@@ -6,6 +6,7 @@ import { tableBorderGreen } from 'Themes/default'
 
 import Container from 'Components/ContentContainer'
 import Wireframe from 'Components/Wireframe'
+import Loading from 'Components/Loading'
 import Table from 'Components/Table'
 import Link from 'Components/Link'
 import Box from 'Components/Box'
@@ -24,7 +25,7 @@ export const List = ({
 }) => {
   const { data, isLoading, error } = useAllArticles()
 
-  if (isLoading || error) return <div>loading...</div>
+  if (isLoading || error) return <Loading />
 
   const formattedData = data
     ?.map(({ id, Title, Author, Release_Date, Link }) => {
