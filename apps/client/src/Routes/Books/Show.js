@@ -20,7 +20,7 @@ export const Show = ({
     title,
     // author,
     description,
-  } = data
+  } = data ?? {}
 
   return (
     <LazyPage isLoading={isLoading} fallback={<Box maxWidth="900px"><Loading /></Box>}>
