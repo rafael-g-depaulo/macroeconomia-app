@@ -7,6 +7,7 @@ import {
 } from "react-router-dom"
 
 import LazyRoute from 'Components/LazyRoute'
+// import Loading from 'Components/Loading'
 
 const Researchers = lazy(() => import('./Researchers'))
 const Articles = lazy(() => import('./Articles'))
@@ -14,6 +15,7 @@ const AboutUs = lazy(() => import('./AboutUs'))
 const Events = lazy(() => import('./Events'))
 const Papers = lazy(() => import('./Papers'))
 const Books = lazy(() => import('./Books'))
+const Videos = lazy(() => import('./Videos'))
 const Home = lazy(() => import('./Home'))
 
 export const Routes = ({
@@ -57,10 +59,14 @@ export const Routes = ({
           <AboutUs />
         </LazyRoute>
 
+        <LazyRoute path={["/videos", "/video"]} >
+          <Videos />
+        </LazyRoute>
+
         {/* 404 */}
         <Route path="*">
-          <div>aa</div>
-          {/* <Redirect to="/home" /> */}
+          {/* <Loading fullpage /> */}
+          <Redirect to="/home" />
         </Route>
       </Switch>
     </Router>

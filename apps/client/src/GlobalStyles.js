@@ -13,6 +13,10 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
   }
 
+  #root {
+    min-height: 100vh;
+  }
+
 `
 
 export default GlobalStyles

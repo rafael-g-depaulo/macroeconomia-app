@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import Title from 'Components/Title'
 import Markdown from 'Components/Markdown'
 
+import { footerGreen } from 'Themes/default'
+
 const Card = styled.div`
 
   background: #FFFFFF;
@@ -21,7 +23,7 @@ const Card = styled.div`
 `
 
 const Divider = styled.div`
-  background: #31965F;
+  background: ${footerGreen};
   width: 100%;
   height: 100%;
   grid-area: divider;

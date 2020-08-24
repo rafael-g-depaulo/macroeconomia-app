@@ -2,13 +2,14 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 
 import { useManagingEditor } from 'Api/managingEditor'
+import { footerGreen } from 'Themes/default'
 
 import EmailIcon from '@material-ui/icons/Email'
 import PhoneIcon from '@material-ui/icons/Phone'
 
 const MyFooter = styled.footer`
   min-height: 30px;
-  background: #31965F;
+  background: ${footerGreen};
   grid-area: footer;
 
   display: flex;

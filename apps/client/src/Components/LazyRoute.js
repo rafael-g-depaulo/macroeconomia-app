@@ -12,7 +12,7 @@ export const LazyRoute = ({
   return (
     <Route path={path} {...props}>
       {({ match }) => (
-        <Suspense fallback={fallback ?? <Loading />}>
+        <Suspense fallback={fallback ?? <Loading fullpage />}>
           {/* basically, add the match property to all direct children */}
           { Children
             .map(children,
