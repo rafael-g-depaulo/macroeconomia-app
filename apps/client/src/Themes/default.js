@@ -8,3 +8,5 @@ export const textBlue4 = "#1554F6"
 
 export const tableBgGreen = "#87CDA7"
 export const tableBorderGreen = "#31965F"
+
+export const footerGreen = "#31965F"

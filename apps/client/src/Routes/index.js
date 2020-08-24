@@ -7,6 +7,7 @@ import {
 } from "react-router-dom"
 
 import LazyRoute from 'Components/LazyRoute'
+// import Loading from 'Components/Loading'
 
 const Researchers = lazy(() => import('./Researchers'))
 const Articles = lazy(() => import('./Articles'))
@@ -64,8 +65,8 @@ export const Routes = ({
 
         {/* 404 */}
         <Route path="*">
-          <div>aa</div>
-          {/* <Redirect to="/home" /> */}
+          {/* <Loading fullpage /> */}
+          <Redirect to="/home" />
         </Route>
       </Switch>
     </Router>

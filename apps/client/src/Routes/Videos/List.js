@@ -12,7 +12,7 @@ export const List = ({
   const { data, isLoading, error } = useAllVideos()
 
   return (
-    <LazyPage isLoading={isLoading || error} fallback={<Box><Loading /></Box>}>
+    <LazyPage isLoading={true || isLoading || error} fallback={<Box><Loading /></Box>}>
       <Box>
         <pre>{JSON.stringify(data, null, 2)}</pre>
       </Box>
