@@ -14,6 +14,7 @@ const AboutUs = lazy(() => import('./AboutUs'))
 const Events = lazy(() => import('./Events'))
 const Papers = lazy(() => import('./Papers'))
 const Books = lazy(() => import('./Books'))
+const Videos = lazy(() => import('./Videos'))
 const Home = lazy(() => import('./Home'))
 
 export const Routes = ({
@@ -55,6 +56,10 @@ export const Routes = ({
 
         <LazyRoute path={["/aboutus", "/about-us", "/sobre-nos"]} >
           <AboutUs />
+        </LazyRoute>
+
+        <LazyRoute path={["/videos", "/video"]} >
+          <Videos />
         </LazyRoute>
 
         {/* 404 */}

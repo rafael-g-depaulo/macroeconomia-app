@@ -30,6 +30,7 @@ export const Navbar = ({
       <NavItem active={boolProp(pathname === "/about-us")} to="/about-us">about us</NavItem>
       <Menu active={boolProp(["/books", "/papers", "/articles"].includes(pathname))}>papers and books</Menu>
       <NavItem active={boolProp(pathname === "/events")} to="/events">events</NavItem>
+      <NavItem active={boolProp(pathname === "/videos")} to="/videos">videos</NavItem>
     </MyNavbar>
   )
 }

@@ -2,11 +2,11 @@ import { strapi } from "Api"
 import useSWR from "swr"
 
 export const fetchVideo = id => strapi
-  .get(`/video/${id}`)
+  .get(`/videos/${id}`)
   .then(({ data }) => data)
 
 export const useVideo = id => {
-  const { data, error } = useSWR(`/video/${id}`, () => fetchVideo(id))
+  const { data, error } = useSWR(`/videos/${id}`, () => fetchVideo(id))
 
   return {
     data,
@@ -16,11 +16,11 @@ export const useVideo = id => {
 }
 
 export const fetchAllVideos = () => strapi
-  .get(`/video`)
+  .get(`/videos`)
   .then(({ data }) => data)
   
 export const useAllVideos = () => {
-  const { data, error } = useSWR(`/video`, () => fetchAllVideos())
+  const { data, error } = useSWR(`/videos`, () => fetchAllVideos())
 
   return {
     data,
