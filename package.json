@@ -28,6 +28,7 @@
     "test": "jest",
     "test:server": "jest server",
     "test:client": "jest client",
+    "version": "lerna version --no-push",
     "watch": "jest --watch",
     "watch:client": "jest --watch client",
     "watch:server": "jest --watch server"
