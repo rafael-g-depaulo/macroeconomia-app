@@ -1,10 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { useFacebook, useInstagram } from 'Api/socialMedia'
+
 import InstagramIcon from '@material-ui/icons/Instagram'
 import FacebookIcon from '@material-ui/icons/Facebook'
 
-import CleanLink from 'Components/CleanLink'
+import Link from 'Components/Link'
 import { footerGreen, footerGreen2 } from 'Themes/default'
 
 const List = styled.div`
@@ -35,17 +37,23 @@ export const Item = ({
   ...props
 }) => {
   return (
-    <CleanLink href={to}>
+    <Link href={to}>
       <Icon>{ children }</Icon>
-    </CleanLink>
+    </Link>
   )
 }
 
 export const SocialMedia = ({
   ...props
 }) => {
-  const fbLink = ""
-  const igLink = ""
+
+  const { data: fb_data } = useFacebook()
+  const { data: ig_data } = useInstagram()
+
+  const fbLink = fb_data ?? "#"
+  const igLink = ig_data ?? "#"
+
+  console.log(fb_data, ig_data)
 
   return (
     <List>
