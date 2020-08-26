@@ -53,8 +53,6 @@ export const SocialMedia = ({
   const fbLink = fb_data ?? "https://www.facebook.com/macrododesenvolvimento"
   const igLink = ig_data ?? "https://www.instagram.com/macro_est_desenvolvimento/"
 
-  console.log(fb_data, ig_data)
-
   return (
     <List>
       <Item to={fbLink}><FacebookIcon fontSize="small"/></Item>

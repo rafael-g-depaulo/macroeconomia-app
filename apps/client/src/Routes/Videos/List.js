@@ -29,7 +29,6 @@ const VideosTable = ({
     RowComponent={({ row }) => 
       <MuiTableRow key={row.id}>
         {row?.values?.map((value, i) => {
-          console.log("row", row)
           return i === 0 ?
           <TableCell
             key={i}
@@ -63,9 +62,6 @@ export const List = ({
       const fileMedia = file[0]?.url
 
       const hasYoutubeLink = !!youtube_link
-
-      // console.log(title, youtube_link, fileMedia, date)
-      console.log(file[0]?.name);
 
       return ({
         id,

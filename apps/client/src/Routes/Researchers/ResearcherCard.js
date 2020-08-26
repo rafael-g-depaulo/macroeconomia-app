@@ -51,7 +51,6 @@ export const ResearcherCard = ({
   data,
   ...props
 }) => {
-  console.log(data)
   const {
     Picture: img,
     Bio,
