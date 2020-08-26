@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import Link from 'Components/CleanLink'
 
-import BannerUrl from './Banner_@1x.png'
+import BannerUrl from './Banner_@3x.png'
 
 const MyLink = styled(Link)`
   /* needed for some reason */
@@ -14,6 +14,8 @@ const Img = styled.img`
   object-fit: cover;
   width: 100%;
   height: auto;
+  max-height: 35vh;
+  object-position: center 0;
 `
 
 export const Banner = ({
