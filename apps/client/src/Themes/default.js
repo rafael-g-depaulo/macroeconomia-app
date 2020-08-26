@@ -10,3 +10,4 @@ export const tableBgGreen = "#87CDA7"
 export const tableBorderGreen = "#31965F"
 
 export const footerGreen = "#31965F"
+export const footerGreen2 = "#143C26"

@@ -7,6 +7,8 @@ import { footerGreen } from 'Themes/default'
 import EmailIcon from '@material-ui/icons/Email'
 import PhoneIcon from '@material-ui/icons/Phone'
 
+import SocialMedia from './SocialMedia'
+
 const MyFooter = styled.footer`
   min-height: 30px;
   background: ${footerGreen};
@@ -29,14 +31,20 @@ const MyFooter = styled.footer`
 
 const ContactArea = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 20px;
 `
 
 const ContactList = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 
-  margin-left: 20px;
+  margin-top: 10px;
+
+  > * + * {
+    margin-left: 20px;
+  }
 `
 
 const MyText = styled.span`
@@ -84,6 +92,7 @@ export const Footer = ({
         </ContactList>
       </ContactArea>
       <DevRights>Developed by rafael.g.depaulo@gmail.com &amp; designed by nayararossisilva@gmail.com</DevRights>
+      <SocialMedia />
     </MyFooter>
   )
 }
