@@ -14,13 +14,16 @@ const List = styled.div`
   flex-direction: row;
 
   > * + * {
-    margin-left: 15px;
+    margin-left: 20px;
   }
 `
 
+const iconSize = 40
 const Icon = styled.div`
-  width: 25px;
-  height: 25px;
+  width: ${iconSize}px;
+  height: ${iconSize}px;
+
+  font-size: ${iconSize - 10}px;
 
   display: flex;
   justify-content: center;
@@ -55,8 +58,8 @@ export const SocialMedia = ({
 
   return (
     <List>
-      <Item to={fbLink}><FacebookIcon fontSize="small"/></Item>
-      <Item to={igLink}><InstagramIcon fontSize="small"/></Item>
+      <Item to={fbLink}><FacebookIcon fontSize="inherit"/></Item>
+      <Item to={igLink}><InstagramIcon fontSize="inherit"/></Item>
     </List>
   )
 }
