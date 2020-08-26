@@ -50,8 +50,8 @@ export const SocialMedia = ({
   const { data: fb_data } = useFacebook()
   const { data: ig_data } = useInstagram()
 
-  const fbLink = fb_data ?? "#"
-  const igLink = ig_data ?? "#"
+  const fbLink = fb_data ?? "https://www.facebook.com/macrododesenvolvimento"
+  const igLink = ig_data ?? "https://www.instagram.com/macro_est_desenvolvimento/"
 
   console.log(fb_data, ig_data)
 
