@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown'
 
 import Text from 'Components/Text'
 import Link from 'Components/Link'
-import Image from './Image'
+import Image from 'Components/Image'
 
 export const Markdown = ({
   source = "",
