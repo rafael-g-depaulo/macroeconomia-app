@@ -8,6 +8,9 @@ import EmailIcon from '@material-ui/icons/Email'
 import PhoneIcon from '@material-ui/icons/Phone'
 
 import SocialMedia from './SocialMedia'
+import useWidth from 'Hooks/useWidth'
+
+const widthBreakpoint = 800
 
 const MyFooter = styled.footer`
   min-height: 30px;
@@ -21,10 +24,11 @@ const MyFooter = styled.footer`
 
   padding: 10px 15px;
 
-  @media (max-width: 800px) {
+  @media (max-width: ${widthBreakpoint}px) {
     flex-direction: column;
-     > *:first-child {
-      margin-bottom: 20px;
+    padding-bottom: 15px;
+     > * + * {
+      margin-top: 20px;
     }
   }
 `
@@ -82,6 +86,7 @@ export const Footer = ({
   ...props
 }) => {
   const { data } = useManagingEditor()
+  const width = useWidth()
   return (
     <MyFooter {...props}>
       <ContactArea>
@@ -91,8 +96,15 @@ export const Footer = ({
           <ContactItem icon={<PhoneIcon />}>{ data?.phone ?? "(XX) XXXXX-XXXX" }</ContactItem>
         </ContactList>
       </ContactArea>
-      <DevRights>Developed by rafael.g.depaulo@gmail.com &amp; designed by nayararossisilva@gmail.com</DevRights>
-      <SocialMedia />
+
+      { width <= widthBreakpoint ? (<>
+        <SocialMedia />
+        <DevRights>Developed by rafael.g.depaulo@gmail.com &amp; designed by nayararossisilva@gmail.com</DevRights>
+        </>) : (<>
+        <DevRights>Developed by rafael.g.depaulo@gmail.com &amp; designed by nayararossisilva@gmail.com</DevRights>
+        <SocialMedia />
+        </>)
+      }
     </MyFooter>
   )
 }
