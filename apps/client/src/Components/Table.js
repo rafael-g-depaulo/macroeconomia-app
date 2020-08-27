@@ -98,7 +98,7 @@ export const Table = ({
               rowsPerPage={rowsPerPage}
               onChangeRowsPerPage={e => setRowsPerPage(e.target.value)}
               page={page}
-              rowsPerPageOptions={[5, 10, 25]}
+              rowsPerPageOptions={[5, 10, 25, 50, 100]}
               onChangePage={_onChangePage}
             />
           </MuiTableRow>
