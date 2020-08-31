@@ -1,4 +1,5 @@
 export const fontSize = 16
+export const fontSize2 = 22
 export const lineHeight = 24
 
 export const textBlue  = "#2196f3"

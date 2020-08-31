@@ -17,13 +17,13 @@ const PORT = port(NODE_ENV)
 // import routes of API
 import Router from 'Routes'
 
-// load DB connection
-// import db from 'Database'
-
 import logger from '@macroeconomia/logger'
 logger(123)
 
-// db.sync().then(() => {
+// load DB connection
+import db from 'Database'
+import increatePageViews from 'Middlewares/increasePageViews'
+db.sync().then(() => {
   app.use('/api', Router({}))
 
   // create a route for the app
@@ -39,9 +39,9 @@ logger(123)
   // any requests that dont have an API path, map to react bundle
   if (NODE_ENV === "production") {
     const appBundleFolder = path.join(__dirname, '../../client/build') 
-    
+
     app.use(express.static(appBundleFolder));
-    app.get('*', (req, res) => {
+    app.get('*', increatePageViews, async (req, res) => {
       console.log("going to the app, not the API", path.join(appBundleFolder, 'index.html'))
       res.sendFile(path.join(appBundleFolder, 'index.html'))
     })
@@ -55,4 +55,4 @@ logger(123)
     console.log(`Server running at: http://localhost:${PORT}/`)
   })
 
-// })
+})
