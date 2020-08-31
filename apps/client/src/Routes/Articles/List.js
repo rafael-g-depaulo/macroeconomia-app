@@ -25,6 +25,7 @@ export const List = ({
   const { data, isLoading, error } = useAllArticles()
 
   const formattedData = data
+    ?.sort((a, b) => Date.parse(b.Release_Date) - Date.parse(a.Release_Date))
     ?.map(({ id, Title, Author, Release_Date, Link }) => {
       const { groups } = /(?<year>\d+)-(?<month>\d+)-(?<day>\d+)/.exec(Release_Date)
       const date = `${groups.day}/${groups.month}/${groups.year}`
