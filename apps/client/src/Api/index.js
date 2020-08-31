@@ -3,12 +3,14 @@ import { serverUrl, strapiUrl } from "@macroeconomia/server-conn-info"
 
 // development options
 const devOptions = {
-  strapiUrl: strapiUrl("development")
+  strapiUrl: strapiUrl("development"),
+  serverUrl: serverUrl("development"),
 }
 
 // production options
 const productionOptions = {
-  strapiUrl: strapiUrl("production")
+  strapiUrl: strapiUrl("production"),
+  serverUrl: serverUrl("production"),
 }
 
 // chose env specific options
@@ -21,7 +23,10 @@ export const api = axios.create({
   baseURL: serverUrl,
 })
 
+// console.log("productionOptions", productionOptions)
+// console.log("devOptions", devOptions)
 console.log("strapiUrl", envSpecificOptions.strapiUrl)
+console.log("serverUrl", envSpecificOptions.serverUrl)
 
 export const strapi = axios.create({
   ...envSpecificOptions,

@@ -15,5 +15,6 @@ export const strapiUrl = (env = defaultEnv) => env === "development"
   : process.env.STRAPI_URL ?? process.env.REACT_APP_STRAPI_URL ?? "http://macroeconomia-strapi.herokuapp.com/"
 
 // default serverUrl for most situations
-export const serverUrl = url()
+export const serverUrl = url
+
 export default serverUrl
