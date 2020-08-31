@@ -4,7 +4,7 @@ export const url = (env = defaultEnv) => `http://${domain(env)}:${port(env)}`
 
 export const domain = (env = defaultEnv) => env === "development"
   ? "localhost"
-  : "http://macroeconomia-app.herokuapp.com/"
+  : "macroeconomia-app.herokuapp.com"
 
 export const port = (env = defaultEnv) => env === "development"
   ? 5000
