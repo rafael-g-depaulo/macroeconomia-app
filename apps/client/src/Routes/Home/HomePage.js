@@ -5,9 +5,11 @@ import LazyPage from 'Components/LazyPage'
 
 import AboutBox from './AboutBox'
 import ResearchersBox from './ResearchersBox'
+import PageViewCounter from './PageViewCounter'
 
 const Grid = styled.div`
   display: grid;
+  position: relative;
 
   @media (min-width: 801px) {
     grid: 
@@ -18,11 +20,13 @@ const Grid = styled.div`
 
   grid-gap: 30px;
 
+  min-height: 100%;
   max-width: 1000px;
   margin: auto;
+  margin-bottom: 30px;
 
   @media (max-width: 800px) {
-    grid: 
+    grid:
       [row1-start] "aboutus" 1fr [row1-end]
       /  1fr
     ;
@@ -41,6 +45,7 @@ export const HomePage = ({
       <Grid>
         <AboutBox />
         <ResearchersBox />
+        <PageViewCounter />
       </Grid>
     </LazyPage>
   )
