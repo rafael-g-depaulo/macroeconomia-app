@@ -28,8 +28,8 @@ export const List = ({
   const { data, isLoading } = useAllEvents()
 
   const formattedData = data
+    ?.sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
     ?.map(({ id, name, date, link }) => {
-      console.log("DATE", date)
       const { groups } = /(?<year>\d+)-(?<month>\d+)-(?<day>\d+)T(?<hour>\d+):(?<minute>\d+)/.exec(date)
       const hour = (Number(groups?.hour ?? 0) + 21) % 24
       const newDate = `${groups.day}/${groups.month}/${groups.year} ${hour}:${groups.minute}`

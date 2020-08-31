@@ -54,6 +54,7 @@ export const List = ({
   const { data, isLoading, error } = useAllVideos()
 
   const formattedData = data
+    ?.sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at))
     ?.map(({ id, title, youtube_link, file = [], created_at }) => {
       
       const { groups } = /(?<year>\d+)-(?<month>\d+)-(?<day>\d+)/.exec(created_at)
