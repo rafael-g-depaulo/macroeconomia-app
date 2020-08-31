@@ -20,7 +20,7 @@ const envSpecificOptions = process.env.NODE_ENV === 'production'
 // create axios instance
 export const api = axios.create({
   ...envSpecificOptions,
-  baseURL: serverUrl,
+  baseURL: envSpecificOptions.serverUrl,
 })
 
 // console.log("productionOptions", productionOptions)
