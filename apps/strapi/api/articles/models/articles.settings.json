@@ -10,16 +10,19 @@
   },
   "attributes": {
     "Title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Author": {
       "type": "string"
     },
     "Release_Date": {
-      "type": "date"
+      "type": "date",
+      "required": true
     },
     "Link": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }
