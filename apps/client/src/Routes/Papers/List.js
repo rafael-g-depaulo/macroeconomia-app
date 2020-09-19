@@ -28,8 +28,8 @@ export const List = ({
   const formattedData = data
     ?.sort((a, b) => Date.parse(b.release_date) - Date.parse(a.release_date))
     ?.map(({ id, title, author, release_date, link }) => {
-      const { groups } = /(?<year>\d+)-(?<month>\d+)-(?<day>\d+)/.exec(release_date)
-      const date = `${groups.day}/${groups.month}/${groups.year}`
+      const { groups } = /(?<year>\d+)-(?<month>\d+)-(?<day>\d+)/.exec(release_date) ?? {}
+      const date = groups ? `${groups.day}/${groups.month}/${groups.year}` : ""
       return ({
         id,
         link,

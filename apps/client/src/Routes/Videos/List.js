@@ -57,8 +57,9 @@ export const List = ({
     ?.sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at))
     ?.map(({ id, title, youtube_link, file = [], created_at }) => {
       
-      const { groups } = /(?<year>\d+)-(?<month>\d+)-(?<day>\d+)/.exec(created_at)
-      const date = `${groups.day}/${groups.month}/${groups.year}`
+      const { groups } = /(?<year>\d+)-(?<month>\d+)-(?<day>\d+)/.exec(created_at) ?? {}
+      const date = groups ? `${groups.day}/${groups.month}/${groups.year}` : ""
+
 
       const fileMedia = file[0]?.url
 
