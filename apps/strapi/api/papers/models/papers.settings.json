@@ -13,13 +13,16 @@
       "type": "string"
     },
     "release_date": {
-      "type": "date"
+      "type": "date",
+      "required": true
     },
     "link": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }
