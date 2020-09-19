@@ -60,7 +60,6 @@ export const List = ({
       const { groups } = /(?<year>\d+)-(?<month>\d+)-(?<day>\d+)/.exec(created_at) ?? {}
       const date = groups ? `${groups.day}/${groups.month}/${groups.year}` : ""
 
-
       const fileMedia = file[0]?.url
 
       const hasYoutubeLink = !!youtube_link
