@@ -17,8 +17,8 @@ const PORT = port(NODE_ENV)
 // import routes of API
 import Router from 'Routes'
 
-import logger from '@macroeconomia/logger'
-logger(123)
+// import logger from '@macroeconomia/logger'
+// logger(123)
 
 // load DB connection
 import db from 'Database'
