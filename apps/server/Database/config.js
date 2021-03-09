@@ -16,6 +16,9 @@ const {
 
 const config = {
   dialect: client,
+  dialectOptions: {
+    ssl: true,
+  },
   host,
   port,
   username,
