@@ -12,6 +12,7 @@ import LazyRoute from 'Components/LazyRoute'
 const Researchers = lazy(() => import('./Researchers'))
 const Articles = lazy(() => import('./Articles'))
 const AboutUs = lazy(() => import('./AboutUs'))
+const DMBulletins = lazy(() => import('./DM Bulletins'))
 const Events = lazy(() => import('./Events'))
 const Papers = lazy(() => import('./Papers'))
 const Books = lazy(() => import('./Books'))
@@ -53,6 +54,10 @@ export const Routes = ({
 
         <LazyRoute path={["/events", "/event", "/eventos", "/evento"]} >
           <Events />
+        </LazyRoute>
+
+        <LazyRoute path={["/bulletins", "/bulletims", "/boletins", "/dm-bulletins"]} >
+          <DMBulletins />
         </LazyRoute>
 
         <LazyRoute path={["/aboutus", "/about-us", "/sobre-nos"]} >
