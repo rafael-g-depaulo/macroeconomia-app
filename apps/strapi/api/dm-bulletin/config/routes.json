@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/dm-bulletins",
+      "handler": "dm-bulletin.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/dm-bulletins/count",
+      "handler": "dm-bulletin.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/dm-bulletins/:id",
+      "handler": "dm-bulletin.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/dm-bulletins",
+      "handler": "dm-bulletin.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/dm-bulletins/:id",
+      "handler": "dm-bulletin.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/dm-bulletins/:id",
+      "handler": "dm-bulletin.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

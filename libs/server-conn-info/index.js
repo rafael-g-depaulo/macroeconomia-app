@@ -11,7 +11,7 @@ export const port = (env = defaultEnv) => env === "development"
   : process.env.PORT ?? 5000
 
 export const strapiUrl = (env = defaultEnv) => env === "development"
-  ? "http://macroeconomia-strapi.herokuapp.com/"
+  ? "http://localhost:1337"
   : process.env.STRAPI_URL ?? process.env.REACT_APP_STRAPI_URL ?? "http://macroeconomia-strapi.herokuapp.com/"
 
 // default serverUrl for most situations

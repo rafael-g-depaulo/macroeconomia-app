@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dm_bulletins",
+  "info": {
+    "name": "DM Bulletin"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Nome": {
+      "type": "string",
+      "required": true
+    },
+    "Data": {
+      "type": "date"
+    }
+  }
+}
