@@ -9,12 +9,16 @@
     "timestamps": true
   },
   "attributes": {
-    "Nome": {
+    "title": {
       "type": "string",
       "required": true
     },
-    "Data": {
+    "release_date": {
       "type": "date"
+    },
+    "link": {
+      "type": "string",
+      "required": true
     }
   }
 }

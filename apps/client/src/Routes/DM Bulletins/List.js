@@ -44,24 +44,24 @@ export const List = ({
     <LazyPage isLoading={isLoading || error} fallback={<Box><Loading /></Box>}>
       <Box>
         <Table
-          columns={["Title", "Release Date"]}
+          columns={["Edition", "Release Date"]}
           data={formattedData}
           RowComponent={({ row }) => 
             <MuiTableRow key={row.id}>
-            {row?.values?.map((value, i) =>
-              i === 0 ?
-              <TableCell
-                key={i}
-                align="inherit"
-                children={<Link href={row.link}>{value}</Link>}
-              />
-              :
-              <TableCell
-                key={i}
-                align="right"
-                children={value}
-              />
-            )}
+              {row?.values?.map((value, i) =>
+                i === 0 ?
+                <TableCell
+                  key={i}
+                  align="inherit"
+                  children={<Link href={row.link}>{value}</Link>}
+                />
+                :
+                <TableCell
+                  key={i}
+                  align="right"
+                  children={value}
+                />
+              )}
             </MuiTableRow>
           }
         />
