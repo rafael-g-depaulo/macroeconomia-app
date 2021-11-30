@@ -28,6 +28,7 @@ export const Navbar = ({
     <MyNavbar {...props}>
       <NavItem active={boolProp(pathname === "/researchers")} to="/researchers">researchers</NavItem>
       <NavItem active={boolProp(pathname === "/about-us")} to="/about-us">about us</NavItem>
+      <NavItem active={boolProp(pathname === "/dm-bulletins")} to="/dm-bulletins">dm bulletins</NavItem>
       <Menu active={boolProp(["/books", "/papers", "/articles"].includes(pathname))}>papers and books</Menu>
       <NavItem active={boolProp(pathname === "/events")} to="/events">events</NavItem>
       <NavItem active={boolProp(pathname === "/videos")} to="/videos">videos</NavItem>
