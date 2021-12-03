@@ -17,7 +17,8 @@ const {
 const config = {
   dialect: client,
   dialectOptions: {
-    ssl: true,
+    // ssl: true,
+    ssl: { rejectUnauthorized: process.env.DB_SSL === "true" },
   },
   host,
   port,
