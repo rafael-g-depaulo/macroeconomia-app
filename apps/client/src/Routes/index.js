@@ -56,7 +56,7 @@ export const Routes = ({
           <Events />
         </LazyRoute>
 
-        <LazyRoute path={["/bulletins", "/bulletims", "/boletins", "/dm-bulletins"]} >
+        <LazyRoute path={["/bulletins", "/bulletims", "/boletins", "/dm-bulletins", "/dm-bulletin", "/bulletin"]} >
           <DMBulletins />
         </LazyRoute>
 
