@@ -1,6 +1,6 @@
 {
   "name": "@macroeconomia/server",
-  "version": "6.0.0",
+  "version": "6.0.2",
   "main": "dist/server.cjs.js",
   "module": "dist/server.esm.js",
   "license": "MIT",
