@@ -20,6 +20,12 @@ const TableCell = styled(MuiTableCell)`
   }
 `
 
+const titleText = `To contribute to the international economic debate we launched the Structuralist
+Development Macroeconomics Bulletin (SDMB). This bulletin is an electronic journal with two
+issues per year with the objective of presenting technical analysis of the main themes related
+to the research goals of the SDMRG. Formally, the issues of this Bulletin will be divided into two main axes: macroeconomics and economic development. The articles published here are shorter in comparison to a traditional
+scientific paper. However, the analyzes presented will be more in-depth than a newspapers article, but accessible for readers who are not specialists in Economics.`
+
 export const List = ({
   ...props
 }) => {
@@ -44,7 +50,7 @@ export const List = ({
     <LazyPage isLoading={isLoading || error} fallback={<Box><Loading /></Box>}>
       <Box>
         <Table
-          columns={["Edition", "Release Date"]}
+          columns={[titleText, "Release Date"]}
           data={formattedData}
           RowComponent={({ row }) => 
             <MuiTableRow key={row.id}>
