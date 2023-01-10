@@ -34,7 +34,7 @@
     "watch": "jest --watch",
     "watch:client": "jest --watch client",
     "watch:server": "jest --watch server",
-    "heroku-postbuild": "yarn install:strapi && yarn build:strapi"    
+    "heroku-postbuild": "echo 'heroku-postbuild running' && yarn install:strapi && yarn build:strapi"    
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
