@@ -10,7 +10,6 @@ module.exports = ({ env }) => {
   const password  = result ? result.groups.password : env('DB_PASS', 'password')
   const port      = result ? result.groups.port     : env.int('DB_PORT', 5432)
   const database  = result ? result.groups.database : env('DB_NAME', 'macroeconomia-strapi')
-  const ssl = env.bool('DB_SSL', false)
 
   return {
     defaultConnection: 'default',
@@ -24,7 +23,7 @@ module.exports = ({ env }) => {
           database,
           username,
           password,
-          ssl: ssl ? { rejectUnauthorized: env.bool('DB_SSL', false) } : false,
+          ssl: { rejectUnauthorized: env.bool('DB_SSL', false) },
         },
         options: {}
       }, // asdfsdfsd
