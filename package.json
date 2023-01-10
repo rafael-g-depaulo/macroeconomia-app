@@ -12,7 +12,7 @@
     "apps/*"
   ],
   "scripts": {
-    "build": "yarn && ${BUILD_SCRIPT:-yarn build:all}",
+    "build": "yarn && yarn install:all && ${BUILD_SCRIPT:-yarn build:all}",
     "build:all": "yarn build:client & yarn build:server & yarn build:strapi",
     "build:client": "yarn workspace @macroeconomia/client run build",
     "build:server": "yarn workspace @macroeconomia/server run build",
