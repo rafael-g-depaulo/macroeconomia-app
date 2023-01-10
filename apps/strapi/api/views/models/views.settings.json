@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "views",
+  "info": {
+    "name": "Views"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "views": {
+      "type": "integer",
+      "required": true,
+      "default": 0,
+      "min": 0
+    }
+  }
+}
