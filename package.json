@@ -24,6 +24,9 @@
     "start:server": "yarn workspace @macroeconomia/server run start",
     "start:strapi": "yarn workspace @macroeconomia/strapi run start",
     "start:client": "yarn workspace @macroeconomia/client run start",
+    "install:client": "cd apps/client && yarn install && cd ../../",
+    "install:strapi": "cd apps/strapi && yarn install && cd ../../",
+    "install:all": "yarn install:client && yarn install strapi",
     "postinstall": "preconstruct dev",
     "test": "jest",
     "test:server": "jest server",
@@ -47,8 +50,7 @@
     "lerna": "^3.22.1"
   },
   "engines": {
-    "node": "12.x",
-    "yarn": "3.1"
+    "node": "12.x"
   },
   "preconstruct": {
     "packages": [
