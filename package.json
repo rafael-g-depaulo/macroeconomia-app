@@ -27,7 +27,7 @@
     "install:client": "cd apps/client && yarn install && cd ../../",
     "install:strapi": "cd apps/strapi && yarn install && cd ../../",
     "install:all": "yarn install:client && yarn install strapi",
-    "postinstall": "preconstruct dev && ${BUILD_SCRIPT:-yarn build:all}",
+    "postinstall": "preconstruct dev && ${BUILD_SCRIPT:-echo 'no build script found'}",
     "test": "jest",
     "test:server": "jest server",
     "test:client": "jest client",
