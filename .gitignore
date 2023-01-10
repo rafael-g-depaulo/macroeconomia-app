@@ -9,3 +9,12 @@ yarn-error.log
 
 # jest test coverage report
 coverage/
+
+# yarn 3.x stuff
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
