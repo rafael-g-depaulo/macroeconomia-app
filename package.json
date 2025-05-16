@@ -14,7 +14,7 @@
   "scripts": {
     "build": "yarn && ${BUILD_SCRIPT:-yarn build:all}",
     "build:all": "yarn build:client & yarn build:server & yarn build:strapi",
-    "build:client": "yarn workspace @macroeconomia/client run build",
+    "build:client": "SKIP_PREFLIGHT_CHECK=true yarn workspace @macroeconomia/client run build",
     "build:server": "yarn workspace @macroeconomia/server run build",
     "build:strapi": "yarn workspace @macroeconomia/strapi run build",
     "clean": "yarn clean:client && yarn clean:server",
