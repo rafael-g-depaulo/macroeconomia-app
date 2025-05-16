@@ -51,7 +51,7 @@
     "lerna": "^3.22.1"
   },
   "engines": {
-    "node": "12.x"
+    "node": ">= 12.x"
   },
   "preconstruct": {
     "packages": [
