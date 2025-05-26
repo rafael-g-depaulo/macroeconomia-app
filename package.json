@@ -1,5 +1,8 @@
 {
   "packageManager": "yarn@4.9.1",
+  "workspaces": [
+    "apps/strapi"
+  ],
   "devDependencies": {
     "nx": "21.1.2"
   }
