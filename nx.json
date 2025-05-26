@@ -1,5 +1,5 @@
 {
-  "$schema": ".yarn/unplugged/nx-virtual-44aa6a1123/node_modules/nx/schemas/nx-schema.json",
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "defaultBase": "master",
   "nxCloudId": "683493291467af3cf683fc0e"
 }
