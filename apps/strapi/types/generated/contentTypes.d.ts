@@ -395,7 +395,9 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    Text: Schema.Attribute.RichText & Schema.Attribute.Required;
+    Text: Schema.Attribute.RichText &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'*Structuralist Development Macroeconomics* is defined by Bresser-Pereira, Oreiro and\nMarconi (2014, p.56) as \u201Cthe economic theory that explains economic development as a\nhistorical process of capital accumulation, incorporating technological progress and\nstructural change, in which accumulation depends on the existence of profitable\ninvestment opportunities offered by sustained growth of demand, which, in tum,\ndepends on the balanced increase of the domestic market and of exports, which, finally,\ndepends on the exchange rate to fluctuate around the equilibrium, instead of being\nchronically and cyclically overvalued, as is often the case in developing countries\u201D \nsee: [http://bresserpereira.sitepessoal.com/documento/4900](http://bresserpereira.sitepessoal.com/documento/4900)\n\nThe research group was founded in 2008 by Jos\u00E9 Luis Oreiro, Professor of Economics\nDepartment at University of Bras\u00EDlia, Brazil. Some researchers from the research group\nhave been doing joint work for a long period, many of them published in economic\njournals in Brazil and abroad such as the *Brazilian Journal of Political Economy,\nMetroeconomica, Structural Change and Economic Dynamics, Review of Political\nEconomy, Cepal Review, Investigaci\u00F3n Econ\u00F3mica, Journal of Post Keynesian\nEconomics, Cambridge Journal of Economics, International Review of Applied\nEconomics*, among others. It is worth noting the high productivity of the group\nmembers, many of whom are Cnpq level I researchers. Within the scope of this research\ngroup, the book &quot;Developmental Macroeconomics: new developmentalism as a growth\nstrategy&quot; was organized published by Routledge, UK, in 2015. Also noteworthy is the\npublication of the book &quot;Moeda e Sistema Financeiro: ensaios em homenagem a\nFernando Cardim de Carvalho&quot; in 2019.\n\nThe research group is registered at Research Groups Directory of the Council for\nTechnological and Scientific Research (CNPq) of the Brazilian Government (Diret\u00F3rio\ndos Grupos de Pesquisa do CNPQ) and certified by the University of Bras\u00EDlia (UnB).\nThe address of the group in the directory can be seen at\n[http://dgp.cnpq.br/dgp/espelhogrupo/11697](http://dgp.cnpq.br/dgp/espelhogrupo/11697). Jos\u00E9 Luis Oreiro is the Leader of the\nresearch group and Luiz Fernando de Paula is the vice-leader.\n\nThe group has six research lines:\n\n1. Growth and Distribution in Post Keynesian Models\n2. Growth, Infrastructure and Convergence Clubs.\n3. Financial Fragility and Business Cycles.\n4. Developmental Macroeconomics\n5. Stock-Flow Consistent Models\n6. Monetary Policy, Exchange Rate Regime and Sustainability of Public Debt.'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -619,6 +621,7 @@ export interface ApiResearcherResearcher extends Struct.CollectionTypeSchema {
 export interface ApiSocialMediaSocialMedia extends Struct.SingleTypeSchema {
   collectionName: 'social_medias';
   info: {
+    description: '';
     displayName: 'Social Media';
     pluralName: 'social-medias';
     singularName: 'social-media';
@@ -630,8 +633,10 @@ export interface ApiSocialMediaSocialMedia extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    facebook_link: Schema.Attribute.String;
-    instagram_link: Schema.Attribute.String;
+    facebook_link: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'https://www.facebook.com/macrododesenvolvimento'>;
+    instagram_link: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'https://www.instagram.com/macro_est_desenvolvimento/'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

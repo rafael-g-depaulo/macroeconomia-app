@@ -4,17 +4,20 @@
   "info": {
     "singularName": "social-media",
     "pluralName": "social-medias",
-    "displayName": "Social Media"
+    "displayName": "Social Media",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
     "facebook_link": {
-      "type": "string"
+      "type": "string",
+      "default": "https://www.facebook.com/macrododesenvolvimento"
     },
     "instagram_link": {
-      "type": "string"
+      "type": "string",
+      "default": "https://www.instagram.com/macro_est_desenvolvimento/"
     }
   }
 }
