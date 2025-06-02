@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "articles",
+  "collectionName": "books",
   "info": {
-    "singularName": "article",
-    "pluralName": "articles",
-    "displayName": "Article"
+    "singularName": "book",
+    "pluralName": "books",
+    "displayName": "Book"
   },
   "options": {
     "draftAndPublish": true
@@ -12,19 +12,18 @@
   "attributes": {
     "Title": {
       "type": "string",
-      "default": "Título",
-      "required": true
+      "required": true,
+      "default": "Título"
     },
     "Author": {
       "type": "string",
-      "required": true,
-      "default": "Autor"
+      "required": false
     },
     "ReleaseDate": {
       "type": "date"
     },
-    "Link": {
-      "type": "string"
+    "Description": {
+      "type": "richtext"
     }
   }
 }

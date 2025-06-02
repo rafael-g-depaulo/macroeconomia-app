@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "researchers",
+  "info": {
+    "singularName": "researcher",
+    "pluralName": "researchers",
+    "displayName": "Researcher"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Picture": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Bio": {
+      "type": "richtext"
+    }
+  }
+}

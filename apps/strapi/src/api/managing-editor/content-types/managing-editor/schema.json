@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "managing_editors",
+  "info": {
+    "singularName": "managing-editor",
+    "pluralName": "managing-editors",
+    "displayName": "Managing Editor",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "string"
+    },
+    "Phone": {
+      "type": "string"
+    }
+  }
+}

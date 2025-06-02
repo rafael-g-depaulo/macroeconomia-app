@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "papers",
+  "info": {
+    "singularName": "paper",
+    "pluralName": "papers",
+    "displayName": "Paper"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Author": {
+      "type": "string"
+    },
+    "Link": {
+      "type": "string"
+    },
+    "ReleaseDate": {
+      "type": "date"
+    }
+  }
+}

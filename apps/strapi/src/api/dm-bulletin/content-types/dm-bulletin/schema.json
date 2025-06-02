@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dm_bulletins",
+  "info": {
+    "singularName": "dm-bulletin",
+    "pluralName": "dm-bulletins",
+    "displayName": "DM Bulletin"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "default": "Título"
+    },
+    "Link": {
+      "type": "string"
+    },
+    "ReleaseDate": {
+      "type": "date"
+    }
+  }
+}
