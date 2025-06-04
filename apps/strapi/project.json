@@ -1,1 +1,16 @@
-{}
+{
+  "targets": {
+    "start": {
+      "executor": "nx:run-script",
+      "options": {
+        "script": "dev"
+      },
+      "metadata": {
+        "scriptContent": "strapi develop",
+        "runCommand": "yarn dev"
+      },
+      "configurations": {},
+      "parallelism": true
+    }
+  }
+}
