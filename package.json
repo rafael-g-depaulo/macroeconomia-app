@@ -5,7 +5,35 @@
     "apps/strapi"
   ],
   "devDependencies": {
+    "@nx/js": "21.1.2",
     "@nx/react": "21.1.2",
-    "nx": "21.1.2"
+    "@nx/vite": "21.1.2",
+    "@nx/web": "21.1.2",
+    "@swc-node/register": "~1.9.1",
+    "@swc/core": "~1.5.7",
+    "@swc/helpers": "~0.5.11",
+    "@types/node": "^20.0.0",
+    "@types/react": "18.3.1",
+    "@types/react-dom": "18.3.0",
+    "@types/react-is": "19.0.0",
+    "@types/styled-components": "5.1.26",
+    "@vitejs/plugin-react": "^4.2.0",
+    "@vitest/ui": "^3.0.0",
+    "babel-plugin-styled-components": "1.10.7",
+    "jiti": "2.4.2",
+    "jsdom": "~22.1.0",
+    "nx": "21.1.2",
+    "prettier": "^2.6.2",
+    "tslib": "^2.3.0",
+    "typescript": "~5.7.2",
+    "vite": "^6.0.0",
+    "vitest": "^3.0.0"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-is": "19.0.0",
+    "react-router-dom": "6.29.0",
+    "styled-components": "5.3.6"
   }
 }
