@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@libs/routing": ["libs/src/index.ts"]
+      "@libs/routing": ["libs/routing/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
