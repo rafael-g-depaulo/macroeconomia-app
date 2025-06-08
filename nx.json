@@ -42,7 +42,8 @@
       },
       "library": {
         "style": "styled-components",
-        "linter": "none"
+        "linter": "none",
+        "unitTestRunner": "none"
       }
     }
   }
