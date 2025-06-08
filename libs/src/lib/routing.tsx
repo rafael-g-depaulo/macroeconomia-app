@@ -1,14 +1,10 @@
-import styled from 'styled-components';
+import { ComponentType, lazy, LazyExoticComponent, ReactNode, Suspense } from 'react';
+import Loading from './Loading';
 
-const StyledRouting = styled.div`
-  color: pink;
-`;
-export function Routing() {
-  return (
-    <StyledRouting>
-      <h1>Welcome to Routing!</h1>
-    </StyledRouting>
-  );
+export const lazyRoute = <T extends () => JSX.Element>(moduleCallback: () => Promise<{default: T}>) => {
+  const RoutePage = lazy(moduleCallback) as LazyExoticComponent<() => JSX.Element>
+
+  return <Suspense fallback={<Loading />}><RoutePage /></Suspense>
 }
 
-export default Routing;
+export { Loading } from "./Loading"
