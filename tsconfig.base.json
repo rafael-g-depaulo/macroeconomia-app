@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@api": ["libs/api/src/index.ts"],
       "@hooks": ["libs/hooks/src/index.ts"],
       "@libs/routing": ["libs/routing/src/index.ts"],
       "@styles": ["libs/styles/src/index.ts"]
