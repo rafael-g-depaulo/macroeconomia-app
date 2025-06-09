@@ -13,9 +13,7 @@
         "command": "vite"
       },
       "metadata": {
-        "technologies": [
-          "vite"
-        ],
+        "technologies": ["vite"],
         "description": "Starts Vite dev server",
         "help": {
           "command": "yarn vite --help",
@@ -28,7 +26,8 @@
       },
       "executor": "nx:run-commands",
       "configurations": {},
-      "parallelism": true
+      "parallelism": true,
+      "dependsOn": ["strapi-app:start"]
     }
   }
 }

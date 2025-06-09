@@ -16876,6 +16876,7 @@ __metadata:
     "@nx/react": "npm:21.1.2"
     "@nx/vite": "npm:21.1.2"
     "@nx/web": "npm:21.1.2"
+    "@strapi/strapi": "npm:5.13.1"
     "@swc-node/register": "npm:~1.9.1"
     "@swc/core": "npm:~1.5.7"
     "@swc/helpers": "npm:~0.5.11"
@@ -17584,9 +17585,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"strapi@workspace:apps/strapi":
+"strapi-app@workspace:apps/strapi":
   version: 0.0.0-use.local
-  resolution: "strapi@workspace:apps/strapi"
+  resolution: "strapi-app@workspace:apps/strapi"
   dependencies:
     "@strapi/plugin-cloud": "npm:5.13.1"
     "@strapi/plugin-users-permissions": "npm:5.13.1"
