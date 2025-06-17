@@ -4,4 +4,6 @@
 
 import { factories } from '@strapi/strapi'
 
-export default factories.createCoreController('api::managing-editor.managing-editor');
+export default factories.createCoreController(
+  'api::managing-editor.managing-editor',
+)

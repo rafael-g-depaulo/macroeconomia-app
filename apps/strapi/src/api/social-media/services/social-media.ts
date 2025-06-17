@@ -2,6 +2,6 @@
  * social-media service
  */
 
-import { factories } from '@strapi/strapi';
+import { factories } from '@strapi/strapi'
 
-export default factories.createCoreService('api::social-media.social-media');
+export default factories.createCoreService('api::social-media.social-media')

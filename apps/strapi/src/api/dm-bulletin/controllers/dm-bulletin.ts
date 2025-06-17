@@ -4,4 +4,4 @@
 
 import { factories } from '@strapi/strapi'
 
-export default factories.createCoreController('api::dm-bulletin.dm-bulletin');
+export default factories.createCoreController('api::dm-bulletin.dm-bulletin')

@@ -14,10 +14,7 @@
       "type": "string"
     },
     "Picture": {
-      "allowedTypes": [
-        "images",
-        "files"
-      ],
+      "allowedTypes": ["images", "files"],
       "type": "media",
       "multiple": false
     },

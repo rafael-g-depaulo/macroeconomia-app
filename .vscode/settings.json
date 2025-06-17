@@ -6,46 +6,32 @@
   "vsicons.associations.folders": [
     {
       "icon": "helper",
-      "extensions": [
-        "hooks"
-      ]
+      "extensions": ["hooks"]
     },
     {
       "icon": "api",
-      "extensions": [
-        "strapi"
-      ]
+      "extensions": ["strapi"]
     },
     {
       "icon": "app",
-      "extensions": [
-        "apps"
-      ]
+      "extensions": ["apps"]
     },
     {
       "icon": "client",
-      "extensions": [
-        "client"
-      ]
+      "extensions": ["client"]
     },
     {
       "icon": "arangodb",
-      "extensions": [
-        "seeds"
-      ]
+      "extensions": ["seeds"]
     },
     {
       "icon": "e2e",
-      "extensions": [
-        "migrations"
-      ]
+      "extensions": ["migrations"]
     },
     {
       "icon": "temp",
-      "extensions": [
-        "jobs"
-      ]
-    },
+      "extensions": ["jobs"]
+    }
   ],
   "vsicons.associations.files": [
     {
@@ -59,20 +45,17 @@
         "jest.json",
         ".jestrc",
         ".jestrc.js",
-        ".jestrc.json",
+        ".jestrc.json"
       ],
       "filename": true,
       "filenamesGlob": ["jest.config", "jest.config.babel"],
-      "extensionsGlob": ["js", "cjs", "mjs"],
+      "extensionsGlob": ["js", "cjs", "mjs"]
     },
     {
       "icon": "reactjs",
-      "extensions": [
-        "craco.config.js"
-      ],
+      "extensions": ["craco.config.js"],
       "filename": true,
-      "format": "svg",
-    },
-
-  ],
+      "format": "svg"
+    }
+  ]
 }
