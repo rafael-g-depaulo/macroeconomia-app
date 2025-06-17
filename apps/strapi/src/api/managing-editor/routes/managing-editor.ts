@@ -2,6 +2,15 @@
  * managing-editor router
  */
 
-import { factories } from '@strapi/strapi';
+import { factories } from '@strapi/strapi'
 
-export default factories.createCoreRouter('api::managing-editor.managing-editor');
+export default factories.createCoreRouter(
+  'api::managing-editor.managing-editor',
+  {
+    config: {
+      find: {
+        auth: false,
+      },
+    },
+  },
+)

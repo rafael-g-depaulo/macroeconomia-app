@@ -2,6 +2,12 @@
  * researcher router
  */
 
-import { factories } from '@strapi/strapi';
+import { factories } from '@strapi/strapi'
 
-export default factories.createCoreRouter('api::researcher.researcher');
+export default factories.createCoreRouter('api::researcher.researcher', {
+  config: {
+    find: {
+      auth: false,
+    },
+  },
+})

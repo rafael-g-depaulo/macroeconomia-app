@@ -2,6 +2,12 @@
  * about-us router
  */
 
-import { factories } from '@strapi/strapi';
+import { factories } from '@strapi/strapi'
 
-export default factories.createCoreRouter('api::about-us.about-us');
+export default factories.createCoreRouter('api::about-us.about-us', {
+  config: {
+    find: {
+      auth: false,
+    },
+  },
+})

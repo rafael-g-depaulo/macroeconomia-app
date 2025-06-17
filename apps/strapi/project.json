@@ -2,6 +2,7 @@
   "targets": {
     "start": {
       "executor": "nx:run-script",
+      "continuous": true,
       "options": {
         "script": "dev"
       },
