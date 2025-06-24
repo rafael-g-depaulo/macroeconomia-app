@@ -677,6 +677,39 @@ export interface ApiVideoVideo extends Struct.CollectionTypeSchema {
   }
 }
 
+export interface ApiViewView extends Struct.SingleTypeSchema {
+  collectionName: 'views'
+  info: {
+    displayName: 'views'
+    pluralName: 'views'
+    singularName: 'view'
+  }
+  options: {
+    draftAndPublish: true
+  }
+  attributes: {
+    createdAt: Schema.Attribute.DateTime
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private
+    locale: Schema.Attribute.String & Schema.Attribute.Private
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::view.view'> &
+      Schema.Attribute.Private
+    publishedAt: Schema.Attribute.DateTime
+    updatedAt: Schema.Attribute.DateTime
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private
+    views: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<0>
+  }
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases'
@@ -1044,6 +1077,7 @@ declare module '@strapi/strapi' {
       'api::researcher.researcher': ApiResearcherResearcher
       'api::social-media.social-media': ApiSocialMediaSocialMedia
       'api::video.video': ApiVideoVideo
+      'api::view.view': ApiViewView
       'plugin::content-releases.release': PluginContentReleasesRelease
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction
       'plugin::i18n.locale': PluginI18NLocale

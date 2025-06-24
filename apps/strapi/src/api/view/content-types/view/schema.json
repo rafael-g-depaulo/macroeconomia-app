@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "views",
+  "info": {
+    "singularName": "view",
+    "pluralName": "views",
+    "displayName": "views"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "views": {
+      "type": "integer",
+      "default": 0,
+      "required": true,
+      "min": 0
+    }
+  }
+}
