@@ -18,7 +18,8 @@
       "@api": ["libs/api/src/index.ts"],
       "@hooks": ["libs/hooks/src/index.ts"],
       "@libs/routing": ["libs/routing/src/index.ts"],
-      "@styles": ["libs/styles/src/index.ts"]
+      "@styles": ["libs/styles/src/index.ts"],
+      "@strapi/types": ["apps/strapi/types/generated/contentTypes.d.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
