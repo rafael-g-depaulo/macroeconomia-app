@@ -2715,6 +2715,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@material-ui/icons@npm:4.11":
+  version: 4.11.3
+  resolution: "@material-ui/icons@npm:4.11.3"
+  dependencies:
+    "@babel/runtime": "npm:^7.4.4"
+  peerDependencies:
+    "@material-ui/core": ^4.0.0
+    "@types/react": ^16.8.6 || ^17.0.0
+    react: ^16.8.0 || ^17.0.0
+    react-dom: ^16.8.0 || ^17.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 10c0/2c405785fc9f98a7d50a796fd294c52b5447b61c5a3d4563d86e07164400cda2ac667c944110b0ab8eca80f880b01846cf3525cbd05c5584b782c3bb4fd2d6eb
+  languageName: node
+  linkType: hard
+
 "@material-ui/styles@npm:^4.11.4":
   version: 4.11.5
   resolution: "@material-ui/styles@npm:4.11.5"
@@ -17351,6 +17368,7 @@ __metadata:
     "@babel/core": "npm:^7.14.5"
     "@babel/preset-react": "npm:^7.14.5"
     "@material-ui/core": "npm:4.11"
+    "@material-ui/icons": "npm:4.11"
     "@nx/js": "npm:21.1.2"
     "@nx/react": "npm:21.1.2"
     "@nx/vite": "npm:21.1.2"
