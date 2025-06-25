@@ -1,3 +1,5 @@
+import { createStrapi } from './strapi'
+
 export * from './connectionConfig'
 export * from './strapi'
 
@@ -10,3 +12,6 @@ export * from './strapiRoutes/papers'
 export * from './strapiRoutes/researcher'
 export * from './strapiRoutes/video'
 export * from './strapiRoutes/viewCounter'
+
+// TODO: configure
+export const strapi = createStrapi('development')

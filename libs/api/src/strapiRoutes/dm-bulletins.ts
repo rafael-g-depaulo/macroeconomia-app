@@ -4,9 +4,12 @@ import { ApiDmBulletinDmBulletin } from '@strapi/types'
 import { makeDataHook } from '../makeDataHook'
 
 export const fetchBulletin = (id: string) =>
-  strapiGet<ApiDmBulletinDmBulletin>(`/bulletins/${id}`)
+  strapiGet<ApiDmBulletinDmBulletin['attributes']>(`/bulletins/${id}`)
 
-export const fetchBulletins = strapiGet<ApiDmBulletinDmBulletin[]>(`/bulletins`)
+export const fetchBulletins =
+  strapiGet<ApiDmBulletinDmBulletin['attributes'][]>(`/bulletins`)
+
+fetchBulletins({} as AxiosInstance)().then((a) => a)
 
 export const useBulletin = (strapi: AxiosInstance, id: string) =>
   makeDataHook(`bulletins/${id}`, fetchBulletin(id)(strapi))

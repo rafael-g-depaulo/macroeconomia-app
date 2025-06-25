@@ -1,7 +1,7 @@
 import useSWR from 'swr'
 
 export const makeDataHook = <T>(key: string, fetcher: () => Promise<T>) => {
-  const { data, error } = useSWR('/managing-editor', fetcher)
+  const { data, error } = useSWR(key, fetcher)
 
   return {
     data,
