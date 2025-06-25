@@ -17,6 +17,7 @@
     "paths": {
       "@api": ["libs/api/src/index.ts"],
       "@components": ["libs/components/src/index.ts"],
+      "@components/*": ["libs/components/src/*"],
       "@hooks": ["libs/hooks/src/index.ts"],
       "@libs/routing": ["libs/routing/src/index.ts"],
       "@strapi/types": ["apps/strapi/types/generated/contentTypes.d.ts"],
