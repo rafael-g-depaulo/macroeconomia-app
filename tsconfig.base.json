@@ -16,9 +16,11 @@
     "baseUrl": ".",
     "paths": {
       "@api": ["libs/api/src/index.ts"],
+      "@api/*": ["libs/api/src/*"],
       "@components": ["libs/components/src/index.ts"],
       "@components/*": ["libs/components/src/*"],
       "@hooks": ["libs/hooks/src/index.ts"],
+      "@hooks/*": ["libs/hooks/src/lib/*"],
       "@libs/routing": ["libs/routing/src/index.ts"],
       "@strapi/types": ["apps/strapi/types/generated/contentTypes.d.ts"],
       "@styles": ["libs/styles/src/index.ts"]
