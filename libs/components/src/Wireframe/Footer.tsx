@@ -51,7 +51,7 @@ const ContactList = styled.div`
   }
 `
 
-const MyText = styled.span`
+const MyText = styled.span<{ mg?: string }>`
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -91,16 +91,18 @@ export const Footer = ({ ...props }) => {
   const width = useWidth()
 
   console.log('!!!!!!!!MMMMMM', data)
+
+  if (!data) return <MyFooter {...props} />
   return (
     <MyFooter {...props}>
       <ContactArea>
-        <MyText mg="5px">Managing Editor: {data?.name ?? 'admin'}</MyText>
+        <MyText mg="5px">Managing Editor: {data.Name ?? 'admin'}</MyText>
         <ContactList>
           <ContactItem icon={<EmailIcon />}>
-            {data?.email ?? 'email@gmail.com'}
+            {data.Email ?? 'email@gmail.com'}
           </ContactItem>
           <ContactItem icon={<PhoneIcon />}>
-            {data?.phone ?? '(XX) XXXXX-XXXX'}
+            {data.Phone ?? '(XX) XXXXX-XXXX'}
           </ContactItem>
         </ContactList>
       </ContactArea>
