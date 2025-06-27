@@ -9,8 +9,6 @@ export const fetchBulletin = (id: string) =>
 export const fetchBulletins =
   strapiGet<ApiDmBulletinDmBulletin['attributes'][]>(`/bulletins`)
 
-fetchBulletins({} as AxiosInstance)().then((a) => a)
-
 export const useBulletin = (strapi: AxiosInstance, id: string) =>
   makeDataHook(`bulletins/${id}`, fetchBulletin(id)(strapi))
 

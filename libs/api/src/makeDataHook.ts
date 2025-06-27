@@ -6,6 +6,7 @@ export const makeDataHook = <T>(key: string, fetcher: () => Promise<T>) => {
   return {
     data,
     isLoading: !error && !data,
-    isError: error,
+    isError: !!error,
+    error,
   }
 }

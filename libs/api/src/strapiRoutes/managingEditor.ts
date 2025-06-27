@@ -4,7 +4,7 @@ import { makeDataHook } from '../makeDataHook'
 import { strapiGet } from '../strapiGet'
 
 export const fetchManagingEditor =
-  strapiGet<ApiManagingEditorManagingEditor>('/managing-editor')
+  strapiGet<ApiManagingEditorManagingEditor['attributes']>('/managing-editor')
 
 export const useManagingEditor = (strapi: AxiosInstance) =>
   makeDataHook('/managing-editor', fetchManagingEditor(strapi))
