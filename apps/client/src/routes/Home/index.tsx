@@ -1,25 +1,48 @@
-// import { useEffect } from 'react'
-// import { createStrapi } from '@api'
-import { strapi, useArticle, usePageViews } from '@api'
+import styled from 'styled-components'
+import LazyPage from '@components/LazyPage'
+
+import AboutBox from './AboutBox'
+import ResearchersBox from './ResearchersBox'
 import PageViewCounter from './PageViewCounter'
 
-// const strapi = createStrapi('development')
+const Grid = styled.div`
+  display: grid;
+  position: relative;
+
+  @media (min-width: 801px) {
+    grid:
+      [row1-start] 'aboutus researchers' 1fr [row1-end]
+      / 5fr minmax(200px, 7fr);
+  }
+
+  grid-gap: 30px;
+
+  min-height: 100%;
+  max-width: 1000px;
+  margin: auto;
+  margin-bottom: 30px;
+
+  @media (max-width: 800px) {
+    grid:
+      [row1-start] 'aboutus' 1fr [row1-end]
+      / 1fr;
+
+    > *:not(:first-child) {
+      display: none;
+    }
+  }
+`
+
 export const Component = () => {
-  // const { data } = useManagingEditor(strapi)
-  // useEffect(() => {
-  //   console.log('test')
-  //   strapi
-  //     .get('/managing-editor')
-  //     .then(({ data, status }) => console.log(data, status))
-  // })
-  // const { data } = useArticle(strapi, 'q51m30sufh1spld35nntuyd2')
-  const { data } = usePageViews(strapi)
-  console.log('DATA???', data)
   return (
-    <>
-      <div>home is here</div>
-      <PageViewCounter />
-    </>
+    <LazyPage>
+      <Grid>
+        <AboutBox />
+        <ResearchersBox />
+        <PageViewCounter />
+      </Grid>
+    </LazyPage>
   )
 }
+
 export default Component
