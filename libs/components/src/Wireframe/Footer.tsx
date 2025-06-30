@@ -90,8 +90,6 @@ export const Footer = ({ ...props }) => {
   const { data } = useManagingEditor(strapi)
   const width = useWidth()
 
-  console.log('!!!!!!!!MMMMMM', data)
-
   if (!data) return <MyFooter {...props} />
   return (
     <MyFooter {...props}>

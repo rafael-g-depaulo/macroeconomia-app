@@ -61,8 +61,8 @@ export const TableHeader = ({ columns }: { columns: any[] }) => {
 
 // rows is an array of strings
 export const Table = ({
-  columns = [],
-  data = [],
+  columns = [] as any[],
+  data = [] as any[],
 
   RowComponent = TableRow,
 
