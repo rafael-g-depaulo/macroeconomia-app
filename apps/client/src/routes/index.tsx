@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react'
 import {
   createBrowserRouter,
   createRoutesFromElements,
+  Navigate,
   Route,
 } from 'react-router-dom'
 import { lazyRoute } from '@libs/routing'
@@ -20,6 +21,17 @@ export const router = createBrowserRouter(
           path=":id"
           element={lazyRoute(() => import('./Researchers/ShowResearcher'))}
         />
+      </Route>
+
+      <Route path="/articles">
+        <Route
+          index
+          element={lazyRoute(() => import('./Articles/ListArticles'))}
+        />
+        {/* <Route
+          path=":id"
+          element={lazyRoute(() => import('./Articles/ShowArticle'))}
+        /> */}
       </Route>
 
       <Route
@@ -49,6 +61,8 @@ export const router = createBrowserRouter(
           element={lazyRoute(() => import('./Books/ShowBook'))}
         />
       </Route>
+      {/* 404 goes to home */}
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Route>,
   ),
 )
