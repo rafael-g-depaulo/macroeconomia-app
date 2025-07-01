@@ -16810,6 +16810,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"remix@npm:^2.16.8":
+  version: 2.16.8
+  resolution: "remix@npm:2.16.8"
+  checksum: 10c0/0b56c3a7a5ae7f9a892f63c71b0a4b941b96d0ddf329f5ec7c8835a703775a9073cd1d0083ded0b84d147dc3cb191c7ad73c70fce7b97e5e0c5e0f5f9185a67a
+  languageName: node
+  linkType: hard
+
 "remove-accents@npm:0.5.0":
   version: 0.5.0
   resolution: "remove-accents@npm:0.5.0"
@@ -17397,6 +17404,7 @@ __metadata:
     react-markdown: "npm:4.3.1"
     react-router-dom: "npm:6.29.0"
     react-spinners: "npm:^0.17.0"
+    remix: "npm:^2.16.8"
     styled-components: "npm:5.3.6"
     swr: "npm:^2.3.3"
     tslib: "npm:^2.3.0"
