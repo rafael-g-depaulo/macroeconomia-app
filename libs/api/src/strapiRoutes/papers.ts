@@ -4,9 +4,9 @@ import { ApiPaperPaper } from '@strapi/types'
 import { makeDataHook } from '../makeDataHook'
 
 export const fetchPaper = (id: string) =>
-  strapiGet<ApiPaperPaper>(`/papers/${id}`)
+  strapiGet<ApiPaperPaper["attributes"]>(`/papers/${id}`)
 
-export const fetchPapers = strapiGet<ApiPaperPaper[]>(`/papers`)
+export const fetchPapers = strapiGet<({ id: string } & ApiPaperPaper["attributes"])[]>(`/papers`)
 
 export const usePaper = (strapi: AxiosInstance, id: string) =>
   makeDataHook(`papers/${id}`, fetchPaper(id)(strapi))

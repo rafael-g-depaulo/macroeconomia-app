@@ -23,6 +23,11 @@ export const router = createBrowserRouter(
         />
       </Route>
 
+      <Route
+        path="/dm-bulletin"
+        element={lazyRoute(() => import('./Bulletin'))}
+      />
+
       <Route path="/articles">
         <Route
           index

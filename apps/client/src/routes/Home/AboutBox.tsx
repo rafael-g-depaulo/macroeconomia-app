@@ -8,11 +8,11 @@ import Markdown from '@components/Markdown'
 import { aboutUs } from '@styles'
 import { strapi } from '@api'
 
-export const AboutBox = ({ ...props }) => {
+export const AboutBox = () => {
   const { data, error } = useAboutUs(strapi)
 
   return (
-    <Box area="aboutus" {...props}>
+    <Box area="aboutus">
       <Title>About Us</Title>
       <Markdown source={error?.toString() ?? data ?? aboutUs} />
     </Box>

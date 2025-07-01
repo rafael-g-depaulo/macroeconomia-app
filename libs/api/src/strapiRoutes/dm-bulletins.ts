@@ -7,7 +7,9 @@ export const fetchBulletin = (id: string) =>
   strapiGet<ApiDmBulletinDmBulletin['attributes']>(`/bulletins/${id}`)
 
 export const fetchBulletins =
-  strapiGet<ApiDmBulletinDmBulletin['attributes'][]>(`/bulletins`)
+  strapiGet<({ id: string } & ApiDmBulletinDmBulletin['attributes'])[]>(
+    `/bulletins`,
+  )
 
 export const useBulletin = (strapi: AxiosInstance, id: string) =>
   makeDataHook(`bulletins/${id}`, fetchBulletin(id)(strapi))
