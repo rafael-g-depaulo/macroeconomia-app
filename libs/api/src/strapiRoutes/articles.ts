@@ -4,9 +4,10 @@ import { ApiArticleArticle } from '@strapi/types'
 import { makeDataHook } from '../makeDataHook'
 
 export const fetchArticle = (id: string) =>
-  strapiGet<ApiArticleArticle>(`/articles/${id}`)
+  strapiGet<ApiArticleArticle['attributes']>(`/articles/${id}`)
 
-export const fetchArticles = strapiGet<ApiArticleArticle[]>(`/articles`)
+export const fetchArticles =
+  strapiGet<({ id: string } & ApiArticleArticle['attributes'])[]>(`/articles`)
 
 export const useArticle = (strapi: AxiosInstance, id: string) =>
   makeDataHook(`articles/${id}`, fetchArticle(id)(strapi))
