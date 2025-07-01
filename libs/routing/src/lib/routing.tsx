@@ -1,5 +1,5 @@
 import { lazy, LazyExoticComponent, Suspense } from 'react'
-import Loading from './Loading'
+import { Loading } from '@components/Loading'
 
 export const lazyRoute = <T extends () => JSX.Element>(
   moduleCallback: () => Promise<{ default: T }>,
@@ -9,10 +9,8 @@ export const lazyRoute = <T extends () => JSX.Element>(
   >
 
   return (
-    <Suspense fallback={<Loading />}>
+    <Suspense fallback={<Loading fullpage />}>
       <RoutePage />
     </Suspense>
   )
 }
-
-export { Loading } from './Loading'
