@@ -26,5 +26,5 @@ export const strapiGet =
         T extends { values: infer T_ }[]
           ? AxiosResponse<RemoveUnkown<StrapiSingleType<T_>[]>>
           : AxiosResponse<RemoveUnkown<StrapiSingleType<T>>>
-      >(key)
+      >(`${key}?populate=*`)
       .then(({ data }) => data.data)

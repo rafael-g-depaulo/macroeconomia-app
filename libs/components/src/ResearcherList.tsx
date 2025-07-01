@@ -25,6 +25,8 @@ export const ResearcherList = ({
 }: {
   researchers: researcher[]
 }) => {
+  console.clear()
+  console.log(researchers, ...researchers)
   return (
     <List {...props}>
       {researchers.map(({ id, Name, Bio, Picture }, i) => (
@@ -33,7 +35,7 @@ export const ResearcherList = ({
           id={id}
           name={Name}
           bio={Bio}
-          picture={Picture.url}
+          picture={Picture?.url}
         />
       ))}
     </List>
