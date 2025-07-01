@@ -28,6 +28,38 @@
       "configurations": {},
       "parallelism": true,
       "dependsOn": ["strapi-app:start"]
+    },
+    "build": {
+      "options": {
+        "cwd": "apps/client",
+        "command": "vite build"
+      },
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": [
+        "default",
+        "^default",
+        {
+          "externalDependencies": ["vite"]
+        }
+      ],
+      "outputs": ["{workspaceRoot}/dist/apps/client"],
+      "metadata": {
+        "technologies": ["vite"],
+        "description": "Run Vite build",
+        "help": {
+          "command": "yarn vite build --help",
+          "example": {
+            "options": {
+              "sourcemap": true,
+              "manifest": "manifest.json"
+            }
+          }
+        }
+      },
+      "executor": "nx:run-commands",
+      "configurations": {},
+      "parallelism": true
     }
   }
 }
