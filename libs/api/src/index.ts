@@ -14,4 +14,6 @@ export * from './strapiRoutes/video'
 export * from './strapiRoutes/viewCounter'
 
 // TODO: configure
-export const strapi = createStrapi('development')
+export const strapi = createStrapi(import.meta.env.MODE, {
+  strapiUrl: import.meta.env.VITE_STRAPI_URL,
+})

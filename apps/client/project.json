@@ -25,7 +25,10 @@
         }
       },
       "executor": "nx:run-commands",
-      "configurations": {},
+      "configurations": {
+        "development": {},
+        "production": {}
+      },
       "parallelism": true,
       "dependsOn": ["strapi-app:start"]
     },
