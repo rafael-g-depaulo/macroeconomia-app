@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <StrictMode>
     <GlobalStyles />
-    <React.Suspense fallback={<Loading />}>
+    <React.Suspense fallback={<Loading fullpage />}>
       <RouterProvider router={router} />
     </React.Suspense>
   </StrictMode>,
