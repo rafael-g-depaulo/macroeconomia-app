@@ -61,7 +61,13 @@
         }
       },
       "executor": "nx:run-commands",
-      "configurations": {},
+      "configurations": {
+        "production": {
+          "env": {
+            "VITE_STRAPI_URL": "http://great-broccoli-c036e725cc.strapiapp.com/api"
+          }
+        }
+      },
       "parallelism": true
     }
   }

@@ -1,17 +1,21 @@
 [build]
-base="apps/client"
-publish="../../dist/apps/client"
-command="yarn && yarn nx run client:build:production --skip-nx-cache"
+base = "apps/client"
+publish = "../../dist/apps/client"
+command = "yarn && yarn nx run client:build:production --skip-nx-cache"
 # environment=
 # processing=
 
+[context.production]
+# publish=""
+environment = { VITE_STRAPI_URL = "http://great-broccoli-c036e725cc.strapiapp.com/api" }
+
 [dev]
-base="apps/client"
-command="yarn nx run client:web:development --skip-nx-cache --excludeTaskDependencies"
-targetPort=4200
-autoLaunch=false
+base = "apps/client"
+command = "yarn nx run client:web:development --skip-nx-cache --excludeTaskDependencies"
+targetPort = 4200
+autoLaunch = false
 
 [[redirects]]
-from="*"
-to="/index.html"
-status=200
+from = "*"
+to = "/index.html"
+status = 200
