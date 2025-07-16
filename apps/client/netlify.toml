@@ -7,7 +7,7 @@ command = "yarn && yarn nx run client:build:production --skip-nx-cache"
 
 [context.production]
 # publish=""
-environment = { VITE_STRAPI_URL = "http://great-broccoli-c036e725cc.strapiapp.com/api" }
+environment = { VITE_STRAPI_URL = "https://great-broccoli-c036e725cc.strapiapp.com/api" }
 
 [dev]
 base = "apps/client"

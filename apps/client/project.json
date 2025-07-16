@@ -64,7 +64,7 @@
       "configurations": {
         "production": {
           "env": {
-            "VITE_STRAPI_URL": "http://great-broccoli-c036e725cc.strapiapp.com/api"
+            "VITE_STRAPI_URL": "https://great-broccoli-c036e725cc.strapiapp.com/api"
           }
         }
       },
